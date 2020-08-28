@@ -42,12 +42,15 @@
             margin-top:50px;
         }
         footer{
-            padding: 10px 0;
+            /*padding: 10px 0;*/
             background-color: #101010;
             color:#9d9d9d;
-            bottom: 0;
+            text-align: center;
             width: 100%;
+            height: 40px;
             position: fixed;
+            bottom: 0;
+            line-height: 40px;
         }
         body{
             padding-bottom: 40px;
@@ -60,15 +63,28 @@
             overflow: hidden;
             top:0px;
         } 
+        .navbar-header a:hover{
+            color: rgb(230, 85, 41);
+            
+        }
         form{
             padding-top:8px;
         }
         form button{
-            background-color:lightgreen;
+            background-color:rgb(230, 85, 41);
+            color: white;
+        }
+        form button:hover{
+            opacity: 0.8;
+            color: white;
+            transition: .7s;
         }
 
         nav{
             position:absolute;
+        }
+        nav li a{
+            transition: .7s;
         }
         body{
             background-image: none;
@@ -107,7 +123,10 @@
         #banner h1{
             position:absolute;
         }
-    
+        #myNavbar ul li a .glyphicon{
+            padding: 0 5px;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -117,7 +136,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <span class="icon-bar"></span>
                 </button>
-                    <a href="#" class="navbar-brand"><img src="camel.jpg" style="padding-bottom: 40px;padding-right: 10px;">Let Us Wander</a>
+                    <a href="#" class="navbar-brand"><img src="camel.jpg" style="padding-bottom: 40px;padding-right: 10px; color: white;">Healthcare Online.</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
@@ -130,11 +149,13 @@
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-lebel="Search">
                     <button class="btn btn-online-success my-2 my-sm-0" type="submit">Search</button>
+
                 </form>
+                
             </div>
         </div>
     </nav>
-    <div id="banner">
+    <!--<div id="banner">
         <h1 style="padding-left:250px;">A journey of 1000 miles begins with a single step</h1>
         <img src="d1.jpg">
         <img src="d3.jpg">
@@ -220,10 +241,11 @@
             </div>
         </div>
     </div>
-    <br><br>
+    <br><br>-->
+    
     <footer>
         <div class="container">
-                <p style="text-align: center;">Copyright Â© Let Us Wander. All Rights Reserved and Contact Us: +91 90000 00000</p>
+            <p style="text-align: center;">Copyright © Let Us Wander. All Rights Reserved and Contact Us: +91 90000 00000</p>
         </div>
     </footer>
     </body>
