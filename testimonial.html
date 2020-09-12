@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!--Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <!-- jQuery library -->
+     <script src="https;//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+    <link rel="stylesheet" type="text/css" href="styling.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url(images/health-icon.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .testimonials{
+            margin:50px auto;
+        }
+        .testimonials h1{
+            text-align: center;
+            font-weight: bold;
+            color:#ff9800;
+            padding-bottom: 10px;
+            text-transform:uppercase;
+        }
+        .testimonials h1::after{
+            content: '';
+            background: #ff9800;
+            display: block;
+            height: 3px;
+            width:170px;
+            margin:20px auto 5px;
+        }
+        .testimonials .row{
+            margin:90px 50px;
+        }
+        .col-md-4{
+            margin:50px;
+        }
+        .profile{
+            padding:70px 10px 10px;
+            background-color: #efefef;
+        }
+        .profile img{
+            top:-60px;
+            position:absolute;
+            left: calc(50% -60px);
+            border:10px solid white;
+        }
+        .user{
+            width:120px;
+            height:120px;
+            border-radius:50%;
+        }
+        .profile h3{
+            font-size: 20px;
+            margin-top: 15px;
+            color: #ff9800
+        }
+        h3 span{
+            font-size:12px;
+            line-height: 30px;
+            color:olive;
+        }
+        blockquote{
+            font-size:16px;
+            line-height: 30px;
+        }
+        .profile:hover{
+            box-shadow: 0 0 15px 15px rgba(0,0,0,0.2);
+            cursor:pointer;
+            transition:0.5s;
+        }
+        .icon{
+            display: inline-block;
+            font-size: 40px;
+            color: rgb(23, 182, 182);
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: left;
+            opacity: 0.6;
+        }
+        p{
+            color:navy;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .testimonal{
+            background:white;
+            text-align: center;
+            padding: 30px 30px 50px;
+            margin: 0 15px 100px;
+            position: relative;
+            margin-top: 168px;
+        }
+
+        .testimonal:before,.testimonal:after{
+            content: "";
+            border-top: 40px solid white;
+            border-right: 125px solid transparent;
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+        }
+
+        .testimonal:after{
+            border-right: none;
+            border-left: 125px solid transparent;
+            left: auto;
+            right: 0;
+        }
+
+        .testimonial .icon{
+            display: inline-block;
+            font-size: 80px;
+            color: rgb(23, 182, 182);
+            margin-bottom: 20px;
+            opacity: 0.6;
+        }
+
+        .description{
+            font-size: 18px;
+            color: #777;
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+
+        .testimonial-content{
+            width: 100%;
+            position:absolute;
+            left: 0;
+        }
+
+        .pic{
+            display: inline-block;
+            border: 4px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 2px 2px orangered;
+            overflow: hidden;
+            z-index: 1;
+            position: relative;
+            
+        }
+
+        .title{
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+            text-transform: capitalize;
+            margin: 0 0 5px 0;
+        }
+
+        .post{
+            display: block;
+            font-size: 16px;
+            color: black;
+        }
+
+        .pic img{
+            width: 100px !important;
+            height: 90px;
+        }
+        article .testimonal{
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand"><img src="images/logo.jpg" style="padding-bottom: 40px;padding-right: 10px;">Health Hunt</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="home.html" target="_blank"><span class="glyphicon glyphicon-user"></span>Home</a></li>
+                    <li><a href="login.html" target="_blank"><span class="glyphicon glyphicon-log-in"></span>Login</a><li>
+                    <li><a href="signup.php" target="_blank"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="testimonials">
+        <div class="container">
+            <h1>Our Community</h1>
+            <p class="text-center">At your service | Healing hands | Trusted treatment | Professional and affordable | Changing lives | For a healthy society</p>
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <div class="profile">
+                        <img src="images/peep1.webp" class="user">
+                        <span class="icon fa fa-quote-left"></span><blockquote> Like this page for getting various informations on daily health routine. For any further queries subscribe our page.
+                             Don't forget to like our page.</blockquote>
+                        </blockquote>
+                        <h3>Aishwarya Singh <span>Founder at HealthHunt</span></h3>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <div class="profile">
+                        <img src="images/Simran.jpeg" class="user">
+                         <span class="icon fa fa-quote-left"></span><blockquote> Like this page for getting various informations on daily health routine. For any further queries subscribe our page.
+                             Don't forget to like our page.</blockquote>
+                        </blockquote>
+                        <h3>Simran Maurya <span>Founder at HealthHunt</span></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <article class="container">
+            <h1>See why customers trust us</h1>
+            <p class="text-center">We believe in spreading smiles of GOOD HEALTH.</p>
+                <div class="row">
+                    <div id="testimonials-slider" class = "owl-carousel">
+                        <div class="testimonal">
+                            <span class="icon fa fa-quote-left"></span>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea assumenda ad ullam reiciendis. Omnis nesciunt quasi debitis suscipit eligendi rem.
+                                </p>
+                            <div class="testimonial-content">
+                                <div class="pic">
+                                    <img src="images/peep4.jpg" alt="">
+                                </div>
+                                <h3 class="title">Michael Clarke</h3>
+                                <span class="post"> Teacher </span>
+                            </div>
+                        </div>
+    
+                        <div class="testimonal">
+                            <span class="icon fa fa-quote-left"></span>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea assumenda ad ullam reiciendis. Omnis nesciunt quasi debitis suscipit eligendi rem.
+                                </p>
+                            <div class="testimonial-content">
+                                <div class="pic">
+                                    <img src="images/peep3.jpg" alt="">
+                                </div>
+                                <h3 class="title"> Mary Stuart </h3>
+                                <span class="post"> Motivational Speaker</span>
+                            </div>
+                        </div>
+    
+                        <div class="testimonal">
+                            <span class="icon fa fa-quote-left"></span>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea assumenda ad ullam reiciendis. Omnis nesciunt quasi debitis suscipit eligendi rem.
+                                </p>
+                            <div class="testimonial-content">
+                                <div class="pic">
+                                    <img src="images/peep1.webp" alt="">
+                                </div>
+                                <h3 class="title">Kilbert D'Souza</h3>
+                                <span class="post">  Bussinesswoman </span>
+                            </div>
+                        </div>
+    
+                        <div class="testimonal">
+                            <span class="icon fa fa-quote-left"></span>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea assumenda ad ullam reiciendis. Omnis nesciunt quasi debitis suscipit eligendi rem.
+                                </p>
+                            <div class="testimonial-content">
+                                <div class="pic">
+                                    <img src="images/peep5.jpg" alt="">
+                                </div>
+                                <h3 class="title"> Samuel Fams</h3>
+                                <span class="post">Service Man</span>
+                            </div>
+                        </div>
+    
+                        <div class="testimonal">
+                            <span class="icon fa fa-quote-left"></span>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea assumenda ad ullam reiciendis. Omnis nesciunt quasi debitis suscipit eligendi rem.
+                                </p>
+                            <div class="testimonial-content">
+                                <div class="pic">
+                                    <img src="images/peep6.jpg" alt="">
+                                </div>
+                                <h3 class="title">Tom Holland </h3>
+                                <span class="post"> Reporter</span>
+                            </div>
+                        </div>
+    
+    
+                    </div>
+                </div>
+        </article>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+
+        $("#testimonials-slider").owlCarousel({
+            items:3,
+            itemsDesktop:[1000,3],
+            itemsDesktopSmall: [979,2],
+            itemsTablet:[768,2],
+            itemsMobile:[650,1],
+            pagination: true,
+            autoPlay:true
+        })
+
+    });
+   </script>
+    
+</body>
+</html>
