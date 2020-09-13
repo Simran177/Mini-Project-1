@@ -18,16 +18,19 @@
         *{
             margin:0;
             padding: 0;
+            box-sizing: border-box;
         }
         body{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-image: url(images/health-icon.png);
+            background-image: url(img/bg2.jpg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
         }
         .testimonials{
             margin:50px auto;
+            z-index: 200;
+           
         }
         .testimonials h1{
             text-align: center;
@@ -177,10 +180,214 @@
         article .testimonal{
             margin-top: 5px;
         }
+        
+        /*Nav Bar Styling*/
+
+        .header{
+            width: 100%;
+            height: 70px;
+            background-color: #131418;
+            padding: 0 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            position: fixed;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+        }
+        .header h2{
+            line-height: 70px;
+            color: white;
+            letter-spacing: 1px;
+        }
+        .header img{
+            width: 50px;
+            height:50px;
+        }
+        #check{
+            position: absolute;
+         
+            visibility: hidden;
+            z-index: -10;
+        }
+        .show-btn, .hide-btn{
+            display: block;
+            font-size: 30px;
+            color: white;
+            line-height: 70px;
+            transition: .4s;
+            /*position: absolute;*/
+            position: fixed;
+            left: 20px;
+            top: 2px;
+        }
+        .hide-btn{
+            opacity: 0;
+        }
+        .menu ul li a:hover{
+            
+            border-left: 10px solid white;
+        }
+        .menu li i:hover, .social-sites i:hover , .show-btn:hover, .hide-btn:hover{
+            color: skyblue;
+        }
+        #check:checked ~ .menu{
+            left: 0;
+        }
+        #check:checked ~ .show-btn{
+            opacity: 0;
+        }
+        #check:checked ~ .hide-btn{
+            opacity: 1;
+        }
+
+        #check:checked ~ .testimonials{
+            width: 80%;
+        }
+        .menu{
+            position: fixed;
+            top: 70px;
+            left: -100%;          /*slider-effect*/
+            width: 20%;
+            height: 100%;
+            background-color:#333;
+            text-align: left;
+            /*padding: 10px 0px;*/
+            transition: .7s;
+            line-height: normal;
+        }
+            
+        .menu li{
+            display: block;
+            line-height: 60px;
+            border-bottom: 1px solid grey;
+           
+        }
+        .menu li a{
+            display: block;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            text-transform: uppercase;
+            padding: 0px 20px;
+            transition: .4s;
+        }
+        .menu li i{
+            margin-right: 15px;
+        }
+        /*.hide-btn{
+             position: absolute;
+             left: 20px;
+             top: 2px;
+             opacity: 0;
+        }
+        /*.show-btn{
+            position: absolute;
+            left: 20px;
+            top: 2px;
+            opacity: 1;
+            
+        }*/
+        
+        .testimonials{
+           /* width: 100%;
+            padding:95px 20px;*/
+            float: right;
+            transition: .7s;
+           
+        }
+        
+        .social-sites{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: 30px;
+            border-bottom: 2px solid rgba(255, 255, 255, .1);
+            border-top: 2px solid rgba(255, 255, 255, .1);
+            padding: 15px 25px;
+            margin-top: 200px;
+        }
+
+        i{
+            font-size: 30px;
+            color: white;
+        }
+
+        @media(max-width: 768px) {
+            .menu{
+                width: 100%;
+                text-align: center;
+            }
+            .menu .social-sites{
+                margin-top: 600px;
+            }
+            .header h2{
+                display: none;
+            }
+        }
+
+        /*Footer Styling*/
+        footer{
+            position: relative;
+            z-index: -100;
+            
+        }
+
+        .container2 .fa:hover{
+            opacity: 0.7;
+        }
+        .container2 .fa{
+          padding: 15px;
+          font-size: 30px;
+          width: 62px;
+          text-align: center;
+          text-decoration: none;
+          margin: 5px 2px;
+          border-radius: 50%;
+        }
+
+
+        .container2 .fa-facebook {
+          background: #3B5998;
+          color: white;
+        }
+
+        .container2 .fa-linkedin {
+          background: #007bb5;
+          color: white;
+        }
+
+        .container2 .fa-instagram {
+          background: #91132e;
+          color: white;
+        }
+
+        .container2 .fa-twitter {
+          background: #55ACEE;
+          color: white;
+        }
+
+        .container2 .fa-google {
+          background: #dd4b39;
+          color: white;
+        }
+        .container3 a:hover{
+          opacity: 0.7;
+        }
+        .list-unstyled li a{
+            color: white;
+        }
+        hr{
+            opacity: .3;
+            
+        }
+
+        
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <!--<nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -196,8 +403,43 @@
                 </ul>
             </div>
         </div>
-    </nav>
-    <section class="testimonials">
+    </nav>-->
+    <div class="header">
+        <img src="images/logo.jpg" alt="_blank">
+        <h2>HEALTH HUNT</h2>
+    </div>
+    
+        <input type="checkbox" id="check">
+        <label for="check" class="show-btn">
+            <i class="fa fa-bars" ></i>
+        </label>
+        <label for="check" class="hide-btn">
+                
+            <i class="fa fa-times"></i>
+        </label>
+        <div class="menu">
+        <ul>
+            <li ><a href="#"><i class="fa fa-home"></i>Home</a></li>
+          
+            <li><a href="#"><i class="fa fa-user"></i>About</a></li>
+            
+            <li><a href="#"><i class="fa fa-tasks"></i>Services</a></li>
+            
+            <li><a href="#"><i class="fa fa-rss"></i>Blog</a></li>
+            
+            <li><a href="#"><i class="fa fa-id-card"></i>Contact</a></li>
+            
+            <div class="social-sites">
+                
+                    <a href="#"><i class="fa fa-facebook-square"></i></a>
+                
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-youtube-square"></i></a>
+                
+            </div>
+        </ul>
+    </div>
+    <section class="testimonials" style="z-index: -200;">
         <div class="container">
             <h1>Our Community</h1>
             <p class="text-center">At your service | Healing hands | Trusted treatment | Professional and affordable | Changing lives | For a healthy society</p>
@@ -321,6 +563,157 @@
 
     });
    </script>
+   <!--Footer Code-->
+
+   <footer class="page-footer font-small stylish-color-dark pt-4" style="float: left; text-align: center; width: 100vw; background-color: #131418">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+  
+      <!-- Grid row -->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3" style="color: white; text-align: left;">
+  
+          <!-- Content -->
+          <h3 class="text-uppercase" >Health Hunt</h3>
+          <p style="color:white;">We do our best to let you reach & experience each corner of the world.</p>
+  
+        </div>
+        <!-- Grid column -->
+        
+        <!--<hr class="clearfix w-100 d-md-none pb-3">-->
+  
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3" style="color: white; text-align: left;">
+  
+          <!-- Links -->
+          <h5 class="text-uppercase">Links</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="home.html">Home</a>
+            </li>
+            <li>
+              <a href="login.html">Log In</a>
+            </li>
+            <li>
+              <a href="signup.html">Sign Up</a>
+            </li>
+            <li>
+              <a href="about.html">About Us</a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3" style="color: white; text-align: left;">
+  
+          <!-- Links -->
+          <h5 class="text-uppercase" >Links</h5>
+  
+          <ul class="list-unstyled" >
+            <li>
+              <a href="contact.html">Contact Us</a>
+            </li>
+            <li>
+              <a href="testimonials3.html">Testimonials</a>
+            </li>
+            <li>
+              <a href="imageGallery.html">Gallery</a>
+            </li>
+            <li>
+              <a href="index.html">Health Hunt</a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+    <!-- Footer Links -->
+  
+  <hr noshade>
+  <div class="container3">
+  
+    <!-- Call to action -->
+    <ul class="list-unstyled list-inline text-center py-2">
+      <li class="list-inline-item">
+        <h3 class="mb-1" style="color: white;">Register for free</h3>
+      </li>
+      <li class="list-inline-item" style="color: white;">
+        <a href="signup.html" class="btn btn-outline-white btn-rounded" style="color: white; border-radius: 20px; padding: 8px 20px; background-color: rgb(253, 63, 5);">
+            Sign up</a>
+            /
+            <strong><a href="login.html" style="color:rgb(253, 63, 5) ; font: lighter; letter-spacing: 1.5px;">Login</a></strong>
+  
+      </li>
+    </ul>
+    <!-- Call to action -->
+  
+  </div>
+  
+  
+  <hr noshade>
+    <div class="container2">
+  
+     
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item" >
+          <a class="btn-floating btn-fb mx-1" href="https://www.facebook.com/" >
+            <i class="fa fa-facebook"> </i>
+          </a>
+        </li>
+  
+        <li class="list-inline-item">
+          <a class="btn-floating btn- mx-1" href="https://www.twitter.com/">
+            <i class="fa fa-twitter"> </i>
+          </a>
+        </li>
+  
+        <li class="list-inline-item">
+          <a class="btn-floating btn- mx-1" href="https://www.google.com/">
+            <i class="fa fa-google"> </i>
+          </a>
+        </li>
+  
+        <li class="list-inline-item">
+          <a class="btn-floating btn-in mx-1" href="https://www.instagram.com/">
+            <i class="fa fa-instagram" > </i>
+          </a>
+        </li>
+      
+       
+        <li class="list-inline-item">
+          <a class="btn-floating btn- mx-1" href="https://www.linkedin.com/">
+            <i class="fa fa-linkedin"> </i>
+          </a>
+        </li>
+  
+       
+      
+      </ul>
+    </div> 
+  
+     
+       <!-- Copyright -->
+    <div class="footer-copyright text-center py-3" style="color: grey; background-color: rgb(29, 28, 28); margin-bottom: -10px; height: 30px; display: flex; align-content: center; justify-content: center; line-height: 30px;">© 2020 Copyright:
+      <a href="https://healthhunt.com/" style="color: white">HealthHunt.com</a>
+    </div>
+   
+  
+   
+  
+    
+    
+  </footer>
+  <!-- Footer -->
     
 </body>
 </html>
