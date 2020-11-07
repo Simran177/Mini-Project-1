@@ -1,4 +1,3 @@
-
 *{
     padding: 0;
     margin: 0;
@@ -153,10 +152,10 @@ header img{
 }
 /* Fading animation */
 .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
+  
+    -webkit-animation-duration: .5s;
+  
+    animation-duration: .5s;
 }
 @-webkit-keyframes fade {
     from {opacity: .4}
@@ -354,6 +353,14 @@ footer{
 hr{
     opacity: .3;
     
+}
+.card{
+    box-shadow: 5px 10px 8px  #888888;
+    height: 300px;
+    border-radius: 15px;
+}
+.card p{
+    text-align: center;
 }
 @media(max-width: 768px) {
     .menu{
