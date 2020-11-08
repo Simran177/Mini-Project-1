@@ -251,7 +251,10 @@ h4{
 
 @media screen and (max-width:767px){
 /* NAV */
-
+.thumbnails{
+    display:flex;
+    align-items: center;
+}
 nav.navigation{
 position:relative;
 height:50px;
