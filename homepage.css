@@ -4,6 +4,8 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
+
+/*Header styling*/
 header img{
     width: 50px;
     height: 50px;
@@ -153,9 +155,9 @@ header img{
 /* Fading animation */
 .fade {
   
-    -webkit-animation-duration: .5s;
+    -webkit-animation-duration: 60s;
   
-    animation-duration: .5s;
+    animation-duration: 50s;
 }
 @-webkit-keyframes fade {
     from {opacity: .4}
@@ -165,35 +167,6 @@ header img{
     from {opacity: .4}
     to {opacity: 1}
 }
-
-/*.text h2{
-    float: left;
-    color: rgb(10, 134, 97);
-    font-weight: bolder;
-    width: 300px;
-    margin-top: 800px;
-}
-#container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    
-}
-#t1{
-    order: 1;
-}
-#t2{
-    order: 2;
-}
-#t3{
-    order: 3;
-}
-#container::after{
-    content: '';
-    display: block;
-    clear: both;
-}*/
 
 #head4 h3{
     color: rgb(10, 134, 97);
@@ -222,14 +195,20 @@ header img{
     justify-content: center;
     margin: auto;
 }
+#head4 a:hover{
+    opacity: 0.8;
+    transition: all .4s ease-in;
+}
+/*blue box styling*/
 .box
 {
-    width: 80vw;
+    width: 80%;
     height: 400px;
     margin: auto;
     overflow: scroll;
     background-color:  rgb(10, 134, 97);
 }
+
 .box h3
 {
     color: white;
@@ -354,6 +333,8 @@ hr{
     opacity: .3;
     
 }
+
+/*3 cards styling*/
 .card{
     box-shadow: 5px 10px 8px  #888888;
     height: 300px;
