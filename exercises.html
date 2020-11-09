@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <!--Latest compiled and minified CSS -->
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-     <!-- jQuery library -->
-     <script src="https;//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"> 
-    <link rel="stylesheet" href="css/style.css">
+    <!--Latest compiled and minified CSS -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <!-- jQuery library -->
+    <script src="https;//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    
+    <!--<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/dailydiet.css">
+    <script src="js/dailydiet.js"></script>
+    <title>Exercises</title>    
+
+    <!--Header Link-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!--nav bar-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="js/main.js"></script>
+    <!--For footer-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         
-        <link rel="stylesheet" href="css/lightbox.css">
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/cycle2.js"></script>
-        <script type="text/javascript" src="js/declarativeToggle.js"></script>
-        <script type="text/javascript" src="js/lightbox.min.js"></script>
-        <script type="text/javascript" src="js/testimonialjs.js"></script>
     
-        <!--For footer-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="dailydiet.css">
-    <title>Exercises</title>
     <style>
        
         body{
             background-image: none;
             background-color: rgb(137,196,244,0.5);
-            margin-left: 20px;
-            margin-right: 20px;
+           /* margin-left: 20px;
+            margin-right: 20px;*/
+            font-family: 'Open Sans';
+          
         }
         .col-md-4 img{
            height:190px;
@@ -42,19 +45,26 @@
        .thumbnail{
            height:200px;
        }
+       .thumbnail img{
+        transition: all 0.2s ease-in-out;
+       }
+       .thumbnail img:hover{
+         border: 1px solid teal;
+         transform: scale(0.92);
+       }
        .caption p{
-           color:olivedrab;
-           font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-           font-weight:25px;
-            font-size:20px;
-            text-align: justify;
+          color:olivedrab;
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          font-weight:25px;
+          font-size:20px;
+          text-align: justify;
        }
        .caption h3{
            color:orangered;
            font-weight: bolder;
        }
        #banner{
-            width:100vw;
+            width: 100vw;
             margin-bottom: 15px;
             height: 150px;
             padding:70px 20px;
@@ -76,11 +86,11 @@
             position:absolute;
         }
         
- 
+        
     </style>
 </head>
 <body>
-    <nav class="navigation">
+    <!--<nav class="navigation">
         <div class="nav-logo"><img src="images/logo.jpg"><span style="padding-bottom: 50px;">Health Hunt</span></div>
         <ul class="nav-menu">
             <li><a href="homepage.html">Home</a></li>
@@ -93,11 +103,35 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </div>
+    </nav>-->
+    <div id="bar">
+      Yoga and Exercises Recommended.
+    </div>
+    <nav class="navigation" style="position: fixed; top: 50px; width: 100%;">
+      <div class="nav-logo"><img src="images/logo.jpg" alt="_target" style="line-height: 50px;width: 40px;height: 40px; margin-right: 15px;">HEALTH HUNT</div>
+      <ul class="nav-menu">
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="contactUs.html">Contact Us</a></li>
+        <li><a href="testimonial.html">Testimonials</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html"> Sign Up</a> </li>
+        
+      </ul>
+      <div class="nav-toggle">
+        <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+      </div>
     </nav>
-
-<br><br><br>
+    <div class="nav-overlay"></div>
     
-    <div class="container-fluid">
+    <script src="js/dailydiet.js"></script>
+
+<br><br><br><br><br><br>
+
+<h4 style="text-align: center;"><b><q> Yoga is the journey of the self, through the self, to the self.</q></b> ~  The Bhagavad Gita &#128578</h4>
+    
+    <div class="container-fluid" style="width: 100%;padding: 30px;">
     <div class="row text-center" id="head">
         <div class="col-md-4 col-sm-6">
             <a href="#" class="thumbnail"><img src="img/21.jpg" alt="Responsive image"></a>
@@ -232,11 +266,12 @@
             </div>
         </div>
     </div>
+    </div>
     <br><br>
     
+    <!--Footer Code-->
 
-    
-   <footer class="page-footer font-small stylish-color-dark pt-4" style="float: left; text-align: center; width: 100%; background-color: #131418">
+   <footer class="page-footer font-small stylish-color-dark pt-4" style="float: left; text-align: center; width: 100vw; background-color: #131418">
 
     <!-- Footer Links -->
     <div class="container-fluid text-center text-md-left">
@@ -263,16 +298,16 @@
           <h5 class="text-uppercase">Links</h5>
   
           <ul class="list-unstyled">
-            <li>
-              <a href="home.html">Home</a>
+            <li style="padding: 5px 0px;">
+              <a href="homepage.html">Home</a>
             </li>
-            <li>
+            <li style="padding: 5px 0px;">
               <a href="login.html">Log In</a>
             </li>
-            <li>
+            <li style="padding: 5px 0px;">
               <a href="signup.html">Sign Up</a>
             </li>
-            <li>
+            <li style="padding: 5px 0px;">
               <a href="about.html">About Us</a>
             </li>
           </ul>
@@ -287,13 +322,13 @@
           <h5 class="text-uppercase" >Links</h5>
   
           <ul class="list-unstyled" >
-            <li>
+            <li style="padding: 5px 0px;">
               <a href="contact.html">Contact Us</a>
             </li>
-            <li>
+            <li style="padding: 5px 0px;">
               <a href="testimonial.html">Testimonials</a>
             </li>
-            <li>
+            <li style="padding: 5px 0px;">
               <a href="index.html">Health Hunt</a>
             </li>
           </ul>
@@ -373,6 +408,9 @@
     </div>
   </footer>
   <!-- Footer -->
+
+    
+   
   <script>
     var h= document.getElementById('head');
     (function($){
