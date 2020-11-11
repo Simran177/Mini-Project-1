@@ -235,19 +235,37 @@ hr{
     opacity: .3;
     
 }
-h1{
-  margin-top: 10px;
-  color:white;
-  text-align: center;
-  font-weight: bolder;
-  margin-bottom: 20px;
-}
-h4{
-  color:lightyellow;
-  text-align: center;
-  font-weight: bolder;
-}
 
+/*3 cards styling*/
+.card{
+    box-shadow: 5px 10px 8px  #888888;
+    height: 300px;
+    border-radius: 15px;
+}
+.card p{
+    text-align: center;
+}
+@media(max-width: 768px) {
+    .menu{
+        width: 100%;
+        text-align: center;
+    }
+    .menu .social-sites{
+        margin-top: 0px;
+        border-bottom: none;
+        border-top: none;
+        
+    }
+    .header h2{
+        display: none;
+    }
+}
+/*Contact purpose icons*/
+
+.fa:hover{
+    color: skyblue;
+    transition: 0.75s;
+}
 
 @media screen and (max-width:767px){
 /* NAV */
