@@ -1,85 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <!--Latest compiled and minified CSS -->
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-     <!-- jQuery library -->
-     <script src="https;//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HealthHunt</title>
-    <link rel="stylesheet" type="text/css" href="styling.css">
-    <style>
-    #cf6_image {
-  margin:0 auto;
-  width:100%;
-  height:100%;
-  transition: background-image 1s ease-in-out;
-  background-image:url("images/h1.jpg");
-  background-size: cover;
- background-position: center;
-}
-
-#cf6_image:hover {
-  background-image:url("images/h3.jpg");
-  background-size: cover;
- background-position: center;
-}
-@media (max-width:800px){
-ul{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-li{
-    width:90%;
-  text-align: center;
-}
-}
-    </style>
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="#" class="navbar-brand"><img src="images/logo.jpg" style="padding-bottom: 40px;padding-right: 10px;">Health Hunt</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="home.html" target="_blank"><span class="glyphicon glyphicon-user"></span>Home</a></li>
-                    <li><a href="login.html" target="_blank"><span class="glyphicon glyphicon-log-in"></span>Login</a><li>
-                    <li><a href="signup.php" target="_blank"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div id="cf6_image" class="shadow">
-       
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div id="background">
-                        <div id="content">
-                    <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: 500px;">Heart to Heart</h1 >
-                    <h4 style="font-style: italic; font-weight:400px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">You can't control what goes on outside,
-                     but you <strong>CAN</strong> control what goes on inside</h4>
-                    <hr>
-                    <a href="home.html" target="_blank"><button" class="btn btn-success btn-lg">Explore Now</button></a>
-                        </div>
-                </div>
+        
+        <div id="navbar">
+            <ul>
+                <li><img src="images/logo.jpg"></li>
+                <li class="right"><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i> Log In</a></li>
+                <li class="right"><a href="signup.html"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign Up</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+            <div id="content">
+                <h2>Health Hunt</h2>
+                <h4>You can't control what goes on outside, but you CAN control what goes on inside</h4>
+                <hr>
+                <a href="homepage.html" class="btn btn-success">Explore Now</a>
             </div>
-        </div>
     </div>
-    </div>
-    <footer>
-        <div class="container">
-                <p style="text-align: center;">Copyright Â© HealthHunt. All Rights Reserved and Contact Us: +91 90000 00000</p>
-        </div>
-    </footer>
 </body>
 </html>
