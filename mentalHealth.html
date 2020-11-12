@@ -7,13 +7,7 @@
   <!--Header Link-->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!--Link for thumbnails-->
-  <link rel="stylesheet" href="css/lightbox.css">
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/cycle2.js"></script>
-	<script type="text/javascript" src="js/declarativeToggle.js"></script>
-  <script type="text/javascript" src="js/lightbox.min.js"></script>
-  <script type="text/javascript" src="js/testimonialjs.js"></script>
+
   <!--For footer-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -25,7 +19,75 @@
   <!--<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"> -->
     <link rel="stylesheet" href="css/dailydiet.css">
     <link rel="stylesheet" href="css/mentalHealth.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script>
+      know = {
+          "Hello":" &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Hi there!",
+          "hello":" &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Hi there!",
+          "HELLO":" &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Hi there!",
+          "Who are you?":" &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp I'm patient.",
+          "who are you?":" &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp I'm patient.",
+          "Who are you?":" &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp I'm patient.",
+          "How are you?":" &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp I'm fine",
+          "how are you?":" &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp I'm fine"
+      };
+      
+      function talk(){
+          var user=document.getElementById("userBox").value;
+          document.getElementById("userBox").value="";
+          document.getElementById("chatLog").innerHTML += user+"<br>";
+
+          if(user in know){
+              document.getElementById("chatLog").innerHTML += know[user]+"<br>";
+          }
+          else{
+              document.getElementById("chatLog").innerHTML +=" I don't understand <br>";
+          }
+      }
+    </script>
+
+    <style>
+      ul li{
+        list-style: none;
+      }
+      #chat .fa{
+            /*padding: 15px;*/
+            font-size: 60px;
+            width: 62px;
+            text-align: center;
+            text-decoration: none;
+            color: whitesmoke;
+        }
+        #chat a{
+            text-decoration: none;
+        }
+        #chat a:hover, input[type="text"]:hover{
+            opacity: 0.7;
+            transition: 0.6s;
+        }
+        h2{
+            color: white;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+            background-color: teal;
+        }
+        #chat h2, #chat a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #chat input[type=text]
+        {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: none;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
   
 </head>
 <body>
@@ -59,13 +121,13 @@
 
         Over the course of your life, if you experience mental health problems, your thinking, mood, and behavior could be affected. Many factors contribute to mental health problems, including:</p>
         <ul>
-        <li> Biological factors, such as genes or brain chemistry</li>
-        <li>Life experiences, such as trauma or abuse</li>
-        <li> history of mental health problems</li>
+        <li> Biological factors, such as genes or brain chemistry.</li>
+        <li>Life experiences, such as trauma or abuse.</li>
+        <li> History of mental health problems.</li>
         </ul>
-        <img src="img/mh3.jpg" id="mh3" class="center">
+        <img src="img/mh3.jpg" id="mh3" class="center" style="width: 60%;">
 
-       <h2>Easy Warning Signs<img src="img/warning1.jpg" id="warning"></h2>
+       <h2>Easy Warning Signs &nbsp; <i class="fa fa-exclamation-triangle" aria-hidden="true"></i></h2>
        <p>Not sure if you or someone you know is living with mental health problems? Experiencing one or more of the following feelings or behaviors can be an early warning sign of a problem:</p>
        
        <ul id="list0">
@@ -90,23 +152,23 @@
        Having a good support system and engaging with trustworthy people are key elements to successfully talking about your own mental health.</p>
        
       <h4> Build Your Support System</h4>
-     <p>  Find someone—such as a parent, family member, teacher, faith leader, health care provider or other trusted individual, who:</p>
+     <p>  Find someone - such as a parent, family member, teacher, faith leader, health care provider or other trusted individual, who:</p>
        <ul id="list">
        <li id="items"> Gives good advice when you want and ask for it; assists you in taking action that will help</li>
-      <li id="items">Likes, respects, and trusts you and who you like, respect, and trust, too</li>
-       <li id="items"> you the space to change, grow, make decisions, and even make mistakes</li>
+       <li id="items">Likes, respects, and trusts you and who you like, respect, and trust, too</li>
+       <li id="items"> You the space to change, grow, make decisions, and even make mistakes</li>
        <li id="items">Listens to you and shares with you, both the good and bad times</li>
        <li id="items">Respects your need for confidentiality so you can tell him or her anything</li>
        <li id="items">Lets you freely express your feelings and emotions without judging, teasing, or criticizing</li>
        <li id="items">Works with you to figure out what to do the next time a difficult situation comes up</li>
-       <li id="items">Has your best interest in mind</li>
+       <li id="items">Have your best interest in mind</li>
        </ul>
       
       <h2> For Parents and Caregivers</h2>
     
 <p>
         As a parent or caregiver, you want the best for your children or other dependents. You may be concerned or have questions about certain behaviors they exhibit and how to ensure they get help.</p>
-        <img src="img/fam.jpg" style="width:80%;height:100px;" class="center">
+        <img src="img/fam.jpg" style="width:60%;height:100px;" class="center">
         <h4>What to Do ?</h4>
 <p>If you are concerned your child's behaviors, it is important to get appropriate care. You should:</p>
 <ul id="list0">
@@ -117,7 +179,7 @@
 
 </ul>
 <h4>How to Talk About Mental Health ?</h4>
-<ol>
+<ol style="padding: 20px;"> 
 <li>Do you need help starting a conversation with your child about mental health? Try leading with these questions. Make sure you actively listen to your child's response.
 
 <li>Can you tell me more about what is happening? How you are feeling?</li>
@@ -129,10 +191,22 @@
 
 <h4>Get Help for Your Child</h4>
 
-<p>Seek immediate assistance if you think your child is in danger of harming themselves or others. You can call a crisis line or the National Suicide Prevention Line at <span style="text-decoration: underline; color:darkred">1-800-273-TALK (8255).</span>
-
+<p>Seek immediate assistance if you think your child is in danger of harming themselves or others. You can call a crisis line or the National Suicide Prevention Line at &nbsp; <a  style="text-decoration: underline; color: maroon;" href="tel:7393090868">7393090868</a>&nbsp;
 If your child is in need of community mental health services you can find help in your area.</p>
 </div>
+
+<!--CODE FOR CHATBOT-->
+
+<div id="chat">
+  <h2 id="chatLog">ChatBot by Health Hunt<br></h2>
+  <br>
+  <input type="text" name="" id="userBox" onkeydown="if(event.keyCode==13){talk()}" placeholder="Put you queries...">
+  <br>
+  <a href="https://app.slack.com/client/T01EL8KALEN/C01EL8T3LE6?redir=%2Fapps%2FA7FTEHPEG"><i class="fa fa-comments-o" aria-hidden="true"></i></a>
+</div>
+
+<!--ENF OF CHATBOT-->
+
    <!--Footer Code-->
 
    <footer class="page-footer font-small stylish-color-dark pt-4" style="float: left; text-align: center; width: 100vw; background-color: #131418">
