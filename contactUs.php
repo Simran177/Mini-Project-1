@@ -284,23 +284,34 @@
                 <h1 class="h1">
                     Contact us :)
                     <br><small>Feel free to get connected.</small></h1>
+                  <?php 
+            $msg = "";
+        
+            if(isset($_GET['error']))
+            {
+               $msg = "Please fill in the blanks";
+               echo '<div class="alert alert-danger">'.$msg.'</div>';
+            }
+           
+                  ?>
             </div>
         </div>
     </div>
+       
     </div>
-
+    
     <!--Main Elememts-->
     <div class="container">
         <div class="row">
             <div class="col-md-8" >
                 <div class="well well-sm">
-                    <form style="z-index: 100;">
+                    <form style="z-index: 100;" action="contactScript.php" method="post">
                       <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="name">
                                     Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
+                                <input type="text" class="form-control" id="name" placeholder="Enter name"  name="name" />
                             </div>
                             <div class="form-group">
                                 <label for="email">
@@ -308,12 +319,12 @@
                                 <div class="input-group">
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
                                     </span>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email_id"/></div>
                             </div>
                             <div class="form-group">
                                 <label for="subject">
                                     Subject</label>
-                                <select id="subject" name="subject" class="form-control" required="required">
+                                <select id="subject" name="subject" class="form-control" name="subject">
                                     <option value="na" selected="">Choose One:</option>
                                     <option value="symptoms">Symptoms</option>
                                     
@@ -329,12 +340,12 @@
                             <div class="form-group">
                                 <label for="name">
                                     Message</label>
-                                <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+                                <textarea name="message" id="message" class="form-control" rows="9" cols="25"  name="message"
                                     placeholder="Message"></textarea>
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
+                            <button type="submit" class="btn btn-primary pull-right" id="btnContactUs" name="send">
                                 Send Message</button>
                         </div>
                     </div>
