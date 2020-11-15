@@ -14,8 +14,8 @@
         <div id="navbar">
             <ul>
                 <li><img src="images/logo.jpg"></li>
-                <li class="right"><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i> Log In</a></li>
-                <li class="right"><a href="signup.html"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign Up</a></li>
+                <li class="right"><a href="login.php"><i class="fa fa-user" aria-hidden="true"></i> Log In</a></li>
+                <li class="right"><a href="signup.php"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign Up</a></li>
             </ul>
         </div>
     </div>
@@ -24,8 +24,7 @@
                 <h2>Health Hunt</h2>
                 <h4>You can't control what goes on outside, but you CAN control what goes on inside</h4>
                 <hr>
-                <a href="homepage.html" class="btn btn-success">Explore Now</a>
+                <a href="homepage.php" class="btn btn-success">Explore Now</a>
             </div>
     </div>
 </body>
-</html>

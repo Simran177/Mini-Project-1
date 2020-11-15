@@ -47,17 +47,17 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"></a>
                 
                     <div class="dropdown-menu">
-                    <a class="dropdown-item" href="about.html">About</a>
-                    <a class="dropdown-item" href="contact.html">Contact</a>
-                    <a class="dropdown-item" href="testimonials3.html">Testimonials</a>
-                    <a class="dropdown-item" href="index.html">Exit</a>
+                    <a class="dropdown-item" href="about.php">About</a>
+                    <a class="dropdown-item" href="contact.php">Contact</a>
+                    <a class="dropdown-item" href="testimonials3.php">Testimonials</a>
+                    <a class="dropdown-item" href="index.php">Exit</a>
                     </div>
                 </li>
             <li class="nav-item">
-                <a class="nav-link" href="login.html">Login</a>
+                <a class="nav-link" href="login.php">Login</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="signup.html">Sign Up</a>
+                <a class="nav-link" href="signup.php">Sign Up</a>
             </li>    
             </ul>
         </nav>
@@ -143,7 +143,7 @@
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsum pariatur delectus ratione cumque sequi ullam, suscipit, labore accusamus obcaecati perspiciatis corrupti libero. Saepe architecto porro iure repellendus, quasi, fuga atque amet nam repudiandae rem suscipit, perferendis laboriosam officia id ratione sequi ad illo velit ab laborum incidunt. Corrupti, tenetur?
         </p>
-        <a href="signup.html">Sign In to get connected with our expert.</a>
+        <a href="signup.php">Sign In to get connected with our expert.</a>
         <p style="text-align: center;">Your identity is safe with us!</p>
     </div>
     
@@ -225,7 +225,7 @@
                 </div>
             </div>
         </div>
-        <a class="btn btn-primary" href="contact.html" style="font-size: 18px;">
+        <a class="btn btn-primary" href="contact.php" style="font-size: 18px;">
             Add your valuable reviews!!<i class="fa fa-arrow-right" style="margin-left: 5px;"></i></a>
     </div>
   </div>
@@ -261,16 +261,16 @@
   
           <ul class="list-unstyled">
             <li>
-              <a href="home.html">Home</a>
+              <a href="home.php">Home</a>
             </li>
             <li>
-              <a href="login.html">Log In</a>
+              <a href="login.php">Log In</a>
             </li>
             <li>
-              <a href="signup.html">Sign Up</a>
+              <a href="signup.php">Sign Up</a>
             </li>
             <li>
-              <a href="about.html">About Us</a>
+              <a href="about.php">About Us</a>
             </li>
           </ul>
   
@@ -285,13 +285,13 @@
   
           <ul class="list-unstyled" >
             <li>
-              <a href="contact.html">Contact Us</a>
+              <a href="contact.php">Contact Us</a>
             </li>
             <li>
-              <a href="testimonial.html">Testimonials</a>
+              <a href="testimonial.php">Testimonials</a>
             </li>
             <li>
-              <a href="index.html">Health Hunt</a>
+              <a href="index.php">Health Hunt</a>
             </li>
           </ul>
   
@@ -313,10 +313,10 @@
         <h3 class="mb-1" style="color: white;">Register for free</h3>
       </li>
       <li class="list-inline-item" style="color: white;">
-        <a href="signup.html" class="btn btn-outline-white btn-rounded" style="color: white; border-radius: 20px; padding: 8px 20px; background-color: rgb(253, 63, 5);">
+        <a href="signup.php" class="btn btn-outline-white btn-rounded" style="color: white; border-radius: 20px; padding: 8px 20px; background-color: rgb(253, 63, 5);">
             Sign up</a>
             /
-            <strong><a href="login.html" style="color:rgb(253, 63, 5) ; font: lighter; letter-spacing: 1.5px;">Login</a></strong>
+            <strong><a href="login.php" style="color:rgb(253, 63, 5) ; font: lighter; letter-spacing: 1.5px;">Login</a></strong>
   
       </li>
     </ul>

@@ -86,11 +86,11 @@
     <nav class="navigation" style="position: fixed; top: 50px; width: 100%;">
       <div class="nav-logo"><img src="images/logo.jpg" alt="_target" style="line-height: 50px;width: 40px;height: 40px; margin-right: 15px;">HEALTH HUNT</div>
       <ul class="nav-menu">
-        <li><a href="homepage.html">Home</a></li>
-        <li><a href="contactUs.html">Contact Us</a></li>
-        <li><a href="testimonial.html">Testimonials</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html"> Sign Up</a> </li>
+        <li><a href="homepage.php">Home</a></li>
+        <li><a href="contactUs.php">Contact Us</a></li>
+        <li><a href="testimonial.php">Testimonials</a></li>
+        <li><a href="login.php">Login</a></li>
+        <li><a href="signup.php"> Sign Up</a> </li>
         
       </ul>
       <div class="nav-toggle">
@@ -432,16 +432,16 @@
   
           <ul class="list-unstyled">
             <li style="padding: 5px 0px;">
-              <a href="homepage.html">Home</a>
+              <a href="homepage.php">Home</a>
             </li>
             <li style="padding: 5px 0px;">
-              <a href="login.html">Log In</a>
+              <a href="login.php">Log In</a>
             </li>
             <li style="padding: 5px 0px;">
-              <a href="signup.html">Sign Up</a>
+              <a href="signup.php">Sign Up</a>
             </li>
             <li style="padding: 5px 0px;">
-              <a href="about.html">About Us</a>
+              <a href="about.php">About Us</a>
             </li>
           </ul>
   
@@ -456,13 +456,13 @@
   
           <ul class="list-unstyled" >
             <li style="padding: 5px 0px;">
-              <a href="contactUs.html">Contact Us</a>
+              <a href="contactUs.php">Contact Us</a>
             </li>
             <li style="padding: 5px 0px;">
-              <a href="testimonial.html">Testimonials</a>
+              <a href="testimonial.php">Testimonials</a>
             </li>
             <li style="padding: 5px 0px;">
-              <a href="index.html">Health Hunt</a>
+              <a href="index.php">Health Hunt</a>
             </li>
           </ul>
   
@@ -484,10 +484,10 @@
         <h3 class="mb-1" style="color: white;">Register for free</h3>
       </li>
       <li class="list-inline-item" style="color: white;">
-        <a href="signup.html" class="btn btn-outline-white btn-rounded" style="color: white; border-radius: 20px; padding: 8px 20px; background-color: rgb(253, 63, 5);">
+        <a href="signup.php" class="btn btn-outline-white btn-rounded" style="color: white; border-radius: 20px; padding: 8px 20px; background-color: rgb(253, 63, 5);">
             Sign up</a>
             /
-            <strong><a href="login.html" style="color:rgb(253, 63, 5) ; font: lighter; letter-spacing: 1.5px;">Login</a></strong>
+            <strong><a href="login.php" style="color:rgb(253, 63, 5) ; font: lighter; letter-spacing: 1.5px;">Login</a></strong>
   
       </li>
     </ul>

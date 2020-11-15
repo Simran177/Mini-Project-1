@@ -397,16 +397,16 @@
   
           <ul class="list-unstyled">
             <li>
-              <a href="home.html">Home</a>
+              <a href="home.php">Home</a>
             </li>
             <li>
-              <a href="login.html">Log In</a>
+              <a href="login.php">Log In</a>
             </li>
             <li>
-              <a href="signup.html">Sign Up</a>
+              <a href="signup.php">Sign Up</a>
             </li>
             <li>
-              <a href="about.html">About Us</a>
+              <a href="about.php">About Us</a>
             </li>
           </ul>
   
@@ -421,16 +421,16 @@
   
           <ul class="list-unstyled" >
             <li>
-              <a href="contactUs.html">Contact Us</a>
+              <a href="contactUs.php">Contact Us</a>
             </li>
             <li>
-              <a href="testimonials3.html">Testimonials</a>
+              <a href="testimonials3.php">Testimonials</a>
             </li>
             <li>
-              <a href="imageGallery.html">Gallery</a>
+              <a href="imageGallery.php">Gallery</a>
             </li>
             <li>
-              <a href="index.html">Health Hunt</a>
+              <a href="index.php">Health Hunt</a>
             </li>
           </ul>
   
@@ -452,10 +452,10 @@
         <h3 class="mb-1" style="color: white;">Register for free</h3>
       </li>
       <li class="list-inline-item" style="color: white;">
-        <a href="signup.html" class="btn btn-outline-white btn-rounded" style="color: white; border-radius: 20px; padding: 8px 20px; background-color: rgb(253, 63, 5);">
+        <a href="signup.php" class="btn btn-outline-white btn-rounded" style="color: white; border-radius: 20px; padding: 8px 20px; background-color: rgb(253, 63, 5);">
             Sign up</a>
             /
-            <strong><a href="login.html" style="color:rgb(253, 63, 5) ; font: lighter; letter-spacing: 1.5px;">Login</a></strong>
+            <strong><a href="login.php" style="color:rgb(253, 63, 5) ; font: lighter; letter-spacing: 1.5px;">Login</a></strong>
   
       </li>
     </ul>
