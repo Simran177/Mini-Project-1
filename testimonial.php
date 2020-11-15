@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testimonials</title>
-    <link rel="stylesheet" type="text/css" href="styling.css">
+  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -316,6 +316,12 @@
                 margin:50px;
                 margin-top: 70px;
             }
+            #profile{
+                margin-top: 100px;
+            }
+            span{
+                display:block;
+            }
 
         }
 
@@ -419,19 +425,19 @@
             <h1>Our Community</h1>
             <p class="text-center">At your service | Healing hands | Trusted treatment | Professional and affordable | Changing lives | For a healthy society</p>
             <div class="row">
-                <div class="col-md-6 text-center" style="z-index: -5;">
+                <div class="col-lg-6 col-sm-12 text-center" style="z-index: -5;">
                     <div class="profile">
                         <img src="images/peep1.webp" class="user">
-                        <span class="icon fa fa-quote-left"></span><blockquote> Like this page for getting various informations on daily health routine. For any further queries subscribe our page.
+                        <span class="icon fa fa-quote-left"></span><blockquote style="text-align:justify;"> Like this page for getting various informations on daily health routine. For any further queries subscribe our page.
                              Don't forget to like our page.</blockquote>
                         </blockquote>
                         <h3>Aishwarya Singh <span>Founder at HealthHunt</span></h3>
                     </div>
                 </div>
-                <div class="col-md-6 text-center" style="z-index: -5;">
-                    <div class="profile">
+                <div class="col-lg-6 col-sm-12 text-center" style="z-index: -5;">
+                    <div class="profile" id="profile">
                         <img src="images/Simran.jpeg" class="user">
-                         <span class="icon fa fa-quote-left"></span><blockquote> Like this page for getting various informations on daily health routine. For any further queries subscribe our page.
+                         <span class="icon fa fa-quote-left"></span><blockquote style="text-align:justify;"> Like this page for getting various informations on daily health routine. For any further queries subscribe our page.
                              Don't forget to like our page.</blockquote>
                         </blockquote>
                         <h3>Simran Maurya <span>Founder at HealthHunt</span></h3>
@@ -577,7 +583,7 @@
               <a href="signup.php">Sign Up</a>
             </li>
             <li>
-              <a href="contactUs.php">Contact Us</a>
+              <a href="about.php">About Us</a>
             </li>
           </ul>
   
