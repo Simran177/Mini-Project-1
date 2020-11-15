@@ -294,7 +294,7 @@
             border-bottom: 2px solid rgba(255, 255, 255, .1);
             border-top: 2px solid rgba(255, 255, 255, .1);
             padding: 15px 25px;
-            margin-top: 200px;
+            margin-top: 180px;
         }
 
         i{
@@ -577,7 +577,7 @@
               <a href="signup.php">Sign Up</a>
             </li>
             <li>
-              <a href="about.php">About Us</a>
+              <a href="contactUs.php">Contact Us</a>
             </li>
           </ul>
   
