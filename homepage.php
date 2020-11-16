@@ -66,11 +66,11 @@
         <div id="jumpbox">
         
             <a href="#" class="jump" id="j1">Diagnosis & Conditions</a>
-            <a href="#" class="jump" id="j2">Newborn Disorders</a>
+            <!--<a href="#" class="jump" id="j2">Newborn Disorders</a>-->
             <a href="#" class="jump" id="j3">Daily Diet</a>
             <a href="#" class="jump" id="j4">Yoga & Exercises</a>
             <a href="#" class="jump" id="j5">Mental Health Portal</a>
-            <a href="#" class="jump" id="j6">Nationwide Services Directory</a>
+            <!--<a href="#" class="jump" id="j6">Nationwide Services Directory</a>-->
         </div>
     </header>
     
@@ -365,7 +365,7 @@
   
      
        <!-- Copyright -->
-    <div class="footer-copyright text-center py-3" style="color: grey; background-color: rgb(29, 28, 28); margin-bottom: -10px; height: 60px; display: flex; align-content: center; justify-content: center; line-height: 30px;">© 2020 Copyright:
+    <div class="footer-copyright text-center py-3" style="color: grey; background-color: rgb(29, 28, 28); margin-bottom: -10px; height: 60px; display: flex; align-content: center; justify-content: center; line-height: 50px;">© 2020 Copyright:
       <a href="https://healthhunt.com/" style="color: white">HealthHunt.com</a>
     </div>
   </footer>
