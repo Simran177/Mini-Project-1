@@ -5,6 +5,7 @@ body{
     width: 100%;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     /* animation: animate ease-in-out 16s infinite; */
     animation: cf3FadeInOut ease-in-out 16s infinite alternate;
 }
@@ -14,13 +15,15 @@ ul{
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.637);
+    background-color: rgba(199, 199, 199, 0.637);
 }
 
 li{
     float: left;
 }
-
+#navbar{
+    width: 100vw;
+}
 #navbar a{
     text-decoration: none;
     display: inline-block;
@@ -70,13 +73,13 @@ h2{
      font-weight: bold;
      font-size: 50px;
      letter-spacing: 3px;
-     color: orangered;
+     color: rgb(255, 94, 0);
  }
 
 h4{
     font-style: italic;
     font-size: 25px;
-    color:navy;
+    color:rgb(37, 96, 173);
     font-weight: bold;
 }
 img{
@@ -88,15 +91,16 @@ img{
 }
 @keyframes cf3FadeInOut {
     0%,100% {
-        background: url(images/h1.jpg);
+        background: url(img/nordwood-themes-nDd3dIkkOLo-unsplash.jpg);
         background-size: cover;
-        /* background-repeat: no-repeat; */
+        /*background-repeat: no-repeat;*/
+        
     }
 
     33% {
-        background: url(images/bg-1.jpg);
+        background: url(img/sarah-dorweiler-x2Tmfd1-SgA-unsplash.jpg);
         background-size: cover;
-        /* background-repeat: no-repeat; */
+        /*background-repeat: no-repeat;*/
     }
 
     67% {

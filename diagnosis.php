@@ -28,6 +28,7 @@
             font-weight: bolder;
             text-transform: capitalize;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+            /*text-shadow: 1px 1px 2px rgba(209, 209, 209, 0.6);*/
         }
         #container ul li{
            /*text-indent: 35px;*/
