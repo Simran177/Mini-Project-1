@@ -284,23 +284,34 @@
                 <h1 class="h1">
                     Contact us :)
                     <br><small>Feel free to get connected.</small></h1>
+                  <?php 
+            $msg = "";
+        
+            if(isset($_GET['error']))
+            {
+               $msg = "Please fill in the blanks";
+               echo '<div class="alert alert-danger">'.$msg.'</div>';
+            }
+           
+                  ?>
             </div>
         </div>
     </div>
+       
     </div>
-
+    
     <!--Main Elememts-->
     <div class="container">
         <div class="row">
             <div class="col-md-8" >
                 <div class="well well-sm">
-                    <form style="z-index: 100;">
+                    <form style="z-index: 100;" action="contactScript.php" method="post">
                       <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="name">
                                     Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
+                                <input type="text" class="form-control" id="name" placeholder="Enter name"  name="name" />
                             </div>
                             <div class="form-group">
                                 <label for="email">
@@ -308,12 +319,12 @@
                                 <div class="input-group">
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
                                     </span>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email_id"/></div>
                             </div>
                             <div class="form-group">
                                 <label for="subject">
                                     Subject</label>
-                                <select id="subject" name="subject" class="form-control" required="required">
+                                <select id="subject" name="subject" class="form-control" name="subject">
                                     <option value="na" selected="">Choose One:</option>
                                     <option value="symptoms">Symptoms</option>
                                     
@@ -329,12 +340,12 @@
                             <div class="form-group">
                                 <label for="name">
                                     Message</label>
-                                <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+                                <textarea name="message" id="message" class="form-control" rows="9" cols="25"  name="message"
                                     placeholder="Message"></textarea>
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
+                            <button type="submit" class="btn btn-primary pull-right" id="btnContactUs" name="send">
                                 Send Message</button>
                         </div>
                     </div>
@@ -397,16 +408,16 @@
   
           <ul class="list-unstyled">
             <li>
-              <a href="home.html">Home</a>
+              <a href="home.php">Home</a>
             </li>
             <li>
-              <a href="login.html">Log In</a>
+              <a href="login.php">Log In</a>
             </li>
             <li>
-              <a href="signup.html">Sign Up</a>
+              <a href="signup.php">Sign Up</a>
             </li>
             <li>
-              <a href="about.html">About Us</a>
+              <a href="about.php">About Us</a>
             </li>
           </ul>
   
@@ -421,16 +432,16 @@
   
           <ul class="list-unstyled" >
             <li>
-              <a href="contactUs.html">Contact Us</a>
+              <a href="contactUs.php">Contact Us</a>
             </li>
             <li>
-              <a href="testimonials3.html">Testimonials</a>
+              <a href="testimonials3.php">Testimonials</a>
             </li>
             <li>
-              <a href="imageGallery.html">Gallery</a>
+              <a href="imageGallery.php">Gallery</a>
             </li>
             <li>
-              <a href="index.html">Health Hunt</a>
+              <a href="index.php">Health Hunt</a>
             </li>
           </ul>
   
@@ -452,10 +463,10 @@
         <h3 class="mb-1" style="color: white;">Register for free</h3>
       </li>
       <li class="list-inline-item" style="color: white;">
-        <a href="signup.html" class="btn btn-outline-white btn-rounded" style="color: white; border-radius: 20px; padding: 8px 20px; background-color: rgb(253, 63, 5);">
+        <a href="signup.php" class="btn btn-outline-white btn-rounded" style="color: white; border-radius: 20px; padding: 8px 20px; background-color: rgb(253, 63, 5);">
             Sign up</a>
             /
-            <strong><a href="login.html" style="color:rgb(253, 63, 5) ; font: lighter; letter-spacing: 1.5px;">Login</a></strong>
+            <strong><a href="login.php" style="color:rgb(253, 63, 5) ; font: lighter; letter-spacing: 1.5px;">Login</a></strong>
   
       </li>
     </ul>

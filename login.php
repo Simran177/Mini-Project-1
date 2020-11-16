@@ -8,7 +8,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <title>SignUp!</title>
+
+    
+    <title>Log In</title>
     <style>
         *{
             margin: 0px 0px 0px 0px;
@@ -17,7 +19,7 @@
         }
         body{
             width: 100%;
-            /*height: 100vh;*/
+            height: 100vh;
             /*background-image: url(img/patrick-hendry-w5SgojGZooI-unsplash.jpg);*/
             background: #466368;
             background: radial-gradient(#648880, #293f50);
@@ -25,13 +27,24 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            background-repeat: no-repeat;
             background-size: 100% 100%;
-            backdrop-filter: 50%;
         }
+        /*.txtcontainer{
+            background: #466368;
+            background: radial-gradient(#648880, #293f50);
+            height: 80px;
+        }
+        .txtcontainer h1{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            line-height: 80px;
+        }*/
+        
         footer{
-            position: fixed;
+            position: absolute;
             bottom: 0;
-            
             width: 100%;
             height: 30px;
             font-size: small;
@@ -40,6 +53,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            position: fixed;
+            bottom: -10;
         }
         
         /* Bordered form */
@@ -50,18 +65,19 @@
         }*/
 
         /* Full-width inputs */
-        input[type=text], input[type=email], input[type=password] {
+        input[type=email], input[type=password] {
         width: 100%;
         padding: 12px 20px;
         margin: 8px 0;
         display: inline-block;
-        border: 1px solid #ccc;
+        /*border: 1px solid #ccc;*/
         box-sizing: border-box;
+        
         }
 
         /* Set a style for all buttons */
         button {
-        background-color: rgb(30, 122, 197);
+        background-color: #2196f3;
         color: white;
         padding: 14px 20px;
         margin: 8px 0;
@@ -75,15 +91,12 @@
         opacity: 0.8;
         }
 
-        input[type=text]:hover {
-        opacity: 0.7;
+        input[type=email]:hover {
+        opacity: 0.8;
         }
 
         input[type=password]:hover {
-        opacity: 0.7;
-        }
-        input[type=email]:hover {
-        opacity: 0.7;
+        opacity: 0.8;
         }
 
         /* Extra style for the cancel button (red) */
@@ -91,9 +104,7 @@
         width: auto;
         padding: 10px 18px;
         background-color: #f44336;
-        margin-top: -10px;
         }
-
         a{
             text-decoration: none;
             color: white;
@@ -104,7 +115,6 @@
             color: white;
             text-decoration: none;
         }
-
         /* Center the avatar image inside this container */
         .txtcontainer {
         text-align: center;
@@ -119,12 +129,10 @@
         }
 
         /* The "Forgot password" text */
-        span.psw {
+        span.psw  {
         float: right;
         padding-top: 16px;
         text-decoration: none;
-       
-        
         }
         span.psw a{
             text-decoration: none;
@@ -148,7 +156,9 @@
         #back a{
             text-decoration: none;
             color: white;
+           
         }
+
         
     </style>
 </head>
@@ -156,50 +166,46 @@
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0" nonce="yy12DFfd"></script>
     
-
-    <form action="action_page.php" method="post" style="width: 550px;">
+    
+    
+    <form action="validation.php" method="post" style="width: 550px;">
+        
         <div class="txtcontainer">
-                <h1 style="color:rgba(253, 253, 253, 0.952); font-size: 50px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); margin-top: 30px;">Sign Up</h1>
+                <h1 style="color:rgba(253, 253, 253, 0.952); font-size: 50px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);">Log In</h1>
         </div>
         
+      
         <div class="container">
-         <!-- <label for="fname" style="color: white; text-shadow: 1px 1px 1px black; font-weight:500; letter-spacing: 1px;" ><b>First Name</b></label>-->
-          <input type="text" placeholder="Enter first name" name="fname" required>
-
-          <!--<label for="lname" style="color: white; text-shadow: 1px 1px 1px black; font-weight:500; letter-spacing: 1px;" ><b>Last Name</b></label>-->
-          <input type="text" placeholder="Enter surname" name="lname" required>
+          <!--<label for="eadd" style="color: white; text-shadow: 1px 1px 1px black; font-weight:500; letter-spacing: 1px; margin-bottom: -8px;" ><b>Email Address</b></label>-->
+          <input type="email" placeholder="Enter Username" name="email_id" required>
       
-          <!--<label for="eadd" style="color: white; text-shadow: 1px 1px 1px black; font-weight:500; letter-spacing: 1px;" ><b>Email Address</b></label>-->
-          <input type="email" placeholder="Enter Email" name="email" required>
-
-          <!--<label for="psw" style="color: white; text-shadow: 1px 1px 1px black; font-weight:500; letter-spacing: 1px;"><b>Password</b></label>-->
-          <input type="password" placeholder="Enter Password" name="psw" required>
+          <!--<label for="psw" style="color: white; text-shadow: 1px 1px 1px black; font-weight:500; letter-spacing: 1px; margin-bottom: -8px;"><b>Password</b></label>-->
+          <input type="password" placeholder="Enter Password" name="password" required>
       
-          <button type="submit">Sign Up</button>
+          <button type="submit">Login</button>
           <label>
             <input type="checkbox" checked="checked" name="remember"> Remember me
           </label>
         </div>
       
         <div class="container" >
-          <a href="index.html" type="button" class="cancelbtn">Cancel</a>
-         
+          <a href="index.php" type="button" class="cancelbtn">Cancel</a>
+          <span class="psw" style="color: white;">Forgot <a href="#" style="color: white;font-weight: bolder; letter-spacing: 0.7px;">password?</a></span>
         </div>
-
+     
         <div id="back" style="text-align: center; color: white; margin-top: 20px;">
-            <!--<a href="index.html">Back</a>
-            |--> Already have an account?
-            <a href="login.html" style="font-weight: bolder; color:white; letter-spacing: 0.7px;">Login</a>
+            <!--<a href="index.php">Back</a>
+            |--> Need an account?
+            <a href="signup.php" style="font-weight: bolder; color:white; letter-spacing: 0.7px;">Sign Up</a>
         </div>
-       
-        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="button" data-action="like" data-size="large" data-share="true" style="display: flex; align-items: center;justify-content: center; margin-top: 10px; margin-bottom: 50px;"></div>
-
-
         
+      <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="button" data-action="like" data-size="large" data-share="true" style="display: flex; align-items: center;justify-content: center; margin-top: 10px;"></div>
+
+     
       </form>
-    
     <footer>
-        Copyright © Tours & Travels. All Rights Reserved and Contact Us: +91 90000 00000
+        Copyright © Health Hunt. All Rights Reserved and Contact Us: +91 90000 00000
     </footer>
+    
 </body>
 </html>

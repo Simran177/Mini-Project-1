@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testimonials</title>
-    <link rel="stylesheet" type="text/css" href="styling.css">
+  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -294,7 +294,7 @@
             border-bottom: 2px solid rgba(255, 255, 255, .1);
             border-top: 2px solid rgba(255, 255, 255, .1);
             padding: 15px 25px;
-            margin-top: 200px;
+            margin-top: 180px;
         }
 
         i{
@@ -315,6 +315,12 @@
             .col-md-6{
                 margin:50px;
                 margin-top: 70px;
+            }
+            #profile{
+                margin-top: 100px;
+            }
+            span{
+                display:block;
             }
 
         }
@@ -419,19 +425,19 @@
             <h1>Our Community</h1>
             <p class="text-center">At your service | Healing hands | Trusted treatment | Professional and affordable | Changing lives | For a healthy society</p>
             <div class="row">
-                <div class="col-md-6 text-center" style="z-index: -5;">
+                <div class="col-lg-6 col-sm-12 text-center" style="z-index: -5;">
                     <div class="profile">
                         <img src="images/peep1.webp" class="user">
-                        <span class="icon fa fa-quote-left"></span><blockquote> Like this page for getting various informations on daily health routine. For any further queries subscribe our page.
+                        <span class="icon fa fa-quote-left"></span><blockquote style="text-align:justify;"> Like this page for getting various informations on daily health routine. For any further queries subscribe our page.
                              Don't forget to like our page.</blockquote>
                         </blockquote>
                         <h3>Aishwarya Singh <span>Founder at HealthHunt</span></h3>
                     </div>
                 </div>
-                <div class="col-md-6 text-center" style="z-index: -5;">
-                    <div class="profile">
+                <div class="col-lg-6 col-sm-12 text-center" style="z-index: -5;">
+                    <div class="profile" id="profile">
                         <img src="images/Simran.jpeg" class="user">
-                         <span class="icon fa fa-quote-left"></span><blockquote> Like this page for getting various informations on daily health routine. For any further queries subscribe our page.
+                         <span class="icon fa fa-quote-left"></span><blockquote style="text-align:justify;"> Like this page for getting various informations on daily health routine. For any further queries subscribe our page.
                              Don't forget to like our page.</blockquote>
                         </blockquote>
                         <h3>Simran Maurya <span>Founder at HealthHunt</span></h3>
@@ -568,16 +574,16 @@
   
           <ul class="list-unstyled">
             <li>
-              <a href="home.html">Home</a>
+              <a href="home.php">Home</a>
             </li>
             <li>
-              <a href="login.html">Log In</a>
+              <a href="login.php">Log In</a>
             </li>
             <li>
-              <a href="signup.html">Sign Up</a>
+              <a href="signup.php">Sign Up</a>
             </li>
             <li>
-              <a href="about.html">About Us</a>
+              <a href="about.php">About Us</a>
             </li>
           </ul>
   
@@ -592,16 +598,16 @@
   
           <ul class="list-unstyled" >
             <li>
-              <a href="contact.html">Contact Us</a>
+              <a href="contact.php">Contact Us</a>
             </li>
             <li>
-              <a href="testimonials3.html">Testimonials</a>
+              <a href="testimonials3.php">Testimonials</a>
             </li>
             <li>
-              <a href="imageGallery.html">Gallery</a>
+              <a href="imageGallery.php">Gallery</a>
             </li>
             <li>
-              <a href="index.html">Health Hunt</a>
+              <a href="index.php">Health Hunt</a>
             </li>
           </ul>
   
@@ -623,10 +629,10 @@
         <h3 class="mb-1" style="color: white;">Register for free</h3>
       </li>
       <li class="list-inline-item" style="color: white;">
-        <a href="signup.html" class="btn btn-outline-white btn-rounded" style="color: white; border-radius: 20px; padding: 8px 20px; background-color: rgb(253, 63, 5);">
+        <a href="signup.php" class="btn btn-outline-white btn-rounded" style="color: white; border-radius: 20px; padding: 8px 20px; background-color: rgb(253, 63, 5);">
             Sign up</a>
             /
-            <strong><a href="login.html" style="color:rgb(253, 63, 5) ; font: lighter; letter-spacing: 1.5px;">Login</a></strong>
+            <strong><a href="login.php" style="color:rgb(253, 63, 5) ; font: lighter; letter-spacing: 1.5px;">Login</a></strong>
   
       </li>
     </ul>
