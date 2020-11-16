@@ -9,7 +9,7 @@ body{
     /* animation: animate ease-in-out 16s infinite; */
     animation: cf3FadeInOut ease-in-out 16s infinite alternate;
 }
-
+    
 ul{
     list-style-type: none;
     margin: 0;
