@@ -28,7 +28,10 @@
         margin: 50px 0 75px;
         width: 80%;
         height: 500px;
+        /*width: 100%;
+        height: 100%;*/
         margin: auto;
+       
       }
 
       .imageSlides {
@@ -36,13 +39,14 @@
         /*left: 50%;
         top: 50%;*/
         transform: translate(-50%, -50%);
-        min-width: 100%;
-        min-height: 100%;
+        /*min-width: 100%;
+        min-height: 100%;*/
+        /*width: 3200px;
+        height: 1000px;*/
         opacity: 0;
         transition: opacity 1s ease-in-out;
         z-index: -1;
         background-size: contain;
-        
       }
 
       /* add 'visible' class via Javascript */
@@ -279,11 +283,11 @@
         <div id="jumpbox">
         
             <a href="diagnosis.php" class="jump" id="j1">Diagnosis & Conditions</a>
-            <!--<a href="#" class="jump" id="j2">Newborn Disorders</a>-->
+            
             <a href="dailydiet.php" class="jump" id="j3">Daily Diet</a>
             <a href="exercises.php" class="jump" id="j4">Yoga & Exercises</a>
             <a href="mentalHealth.php" class="jump" id="j5">Mental Health Portal</a>
-            <!--<a href="#" class="jump" id="j6">Nationwide Services Directory</a>-->
+            
         </div>
     </header>
 
@@ -292,24 +296,26 @@
     <div class="slideshowContainer">
   
       
-        <img class="imageSlides" src="img/jesse-orrico-Us3AQvyOP-o-unsplash.jpg">
+        <img class="imageSlides" src="img/jesse-orrico-Us3AQvyOP-o-unsplash.jpg" style="width: 800px; height: 500px; background-position: center; background-size: contain;">
         <img class="imageSlides" src="img/johnny-mcclung-uDM99xirqI4-unsplash.jpg">
-        <img class="imageSlides" src="img/nordwood-themes-nDd3dIkkOLo-unsplash.jpg">
         <img class="imageSlides" src="img/ola-mishchenko-VRB1LJoTZ6w-unsplash.jpg" alt="">
         <img class="imageSlides" src="img/patrick-hendry-w5SgojGZooI-unsplash.jpg" alt="">
         <img class="imageSlides" src="img/priscilla-du-preez-LxEsi17Au6U-unsplash.jpg" alt="">
-        <img class="imageSlides" src="img/sarah-dorweiler-x2Tmfd1-SgA-unsplash.jpg" alt="">
+        <img class="imageSlides" src="img/wall.png" alt="">
+        
         
         
       
         <span id ="leftArrow" class="slideshowArrow">&#8249;</span>
         <span id ="rightArrow" class="slideshowArrow">&#8250;</span>
         
-          <div class="slideshowCircles">
+        <div class="slideshowCircles">
           <span class="circle dot"></span>
           <span class="circle"></span>
           <span class="circle"></span>
-          <span class="circle"></span><span class="circle"></span><span class="circle"></span><span class="circle"></span>
+          <span class="circle"></span>
+          <span class="circle"></span>
+          <span class="circle"></span>
         </div>
         
       </div>
