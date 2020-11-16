@@ -21,6 +21,228 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     
+    <style>
+      .slideshowContainer {
+        position: relative;
+        overflow: hidden;
+        margin: 50px 0 75px;
+        width: 80%;
+        height: 500px;
+        margin: auto;
+      }
+
+      .imageSlides {
+        position: absolute;
+        /*left: 50%;
+        top: 50%;*/
+        transform: translate(-50%, -50%);
+        min-width: 100%;
+        min-height: 100%;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        z-index: -1;
+        background-size: contain;
+        
+      }
+
+      /* add 'visible' class via Javascript */
+      .visible {
+        opacity: 1;
+      }
+
+      .slideshowArrow {
+        font-size: 7em;
+        color: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        transition: opacity 0.2s ease-in-out;
+      }
+
+      .slideshowArrow:hover {
+        opacity: 0.75;
+      }
+
+      #leftArrow {
+        position: absolute;
+        left: 4%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      #rightArrow {
+        position: absolute;
+        right: 4%;
+        top: 50%;
+        transform: translate(50%, -50%);
+      }
+
+      .slideshowCircles {
+        position: absolute;
+        bottom: 2%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      .circle {
+        display: inline-block;
+        margin-left: 3px;
+        margin-right: 3px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: solid 2px rgba(255, 255, 255, 0.5);
+        transition: 1s ease-in-out;
+      }
+
+      .dot {
+        background-color: rgba(255, 255, 255, 0.7);
+        border: solid 2px rgba(255, 255, 255, 0.5);
+      }
+
+      
+      /* NAV */
+      ol, ul {
+        list-style: none;
+      }
+      nav.navigation{
+        position:relative;
+        height:50px;
+        background-color:#3c3c3c;
+        z-index:200;
+      }
+      .nav-logo{
+        float:left;
+        height:50px;
+        line-height:50px;
+        padding:0 20px;
+        background-color:#11999e;
+        color:#ffffff;
+        font-weight:700;
+        text-transform:uppercase;
+      }
+      ul.nav-menu, ul.nav-menu li, ul.nav-menu li a{
+        float:left;
+      }
+      ul.nav-menu{
+        padding-left:10px;
+        
+      }
+      ul.nav-menu li a{
+        height:50px;
+        line-height:50px;
+        padding:0 10px;
+        color:#ffffff;
+        text-decoration:none;
+        -webkit-transition-duration: 0.3s;
+        -o-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+      }
+      ul.nav-menu li a:hover{
+        color:#6decb9;
+      }
+      .nav-toggle{
+        display:none;
+
+        position:absolute;
+        top:0;
+        right:0;
+        width:50px;
+        height:50px;
+        background-color:#11999e;
+        cursor:pointer;
+      }
+      span.icon-bar{
+        position:absolute;
+        right:12px;
+        display:block;
+        width:26px;
+        height:2px;
+        background-color:#ffffff;
+        -webkit-transition-duration: 0.3s;
+        -o-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+      }
+      .icon-bar:nth-child(1){
+      top:17px;
+      }
+      .icon-bar:nth-child(2){
+      top:24px;
+      }
+      .icon-bar:nth-child(3){
+      top:31px;
+      }
+      .nav-overlay{
+        position:absolute;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        background-color:rgba(0,0,0,0.5);
+        z-index:1;
+        opacity:0;
+        visibility:hidden;
+        -webkit-transition-duration: 0.3s;
+        -o-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+      }
+      .nav-overlay.active{
+        opacity:1;
+        visibility:visible;
+      }
+
+      /* ICON BARS ANIMATION */
+
+      .nav-toggle.active .icon-bar:nth-child(1){
+        top:24px;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      .nav-toggle.active .icon-bar:nth-child(2){
+        width:0;
+      }
+      .nav-toggle.active .icon-bar:nth-child(3){
+        top:24px;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+      @media screen and (max-width:767px){
+        ul.nav-menu{
+            position:absolute;
+            top:50px;
+            width:100%;
+            height:0;
+            padding:0;
+            overflow:hidden;
+        }
+        ul.nav-menu.active{
+            height:auto;
+        }
+        ul.nav-menu li{
+            width:100%;
+        }
+        ul.nav-menu li a{
+            width:100%;
+            padding:0;
+            text-align:center;
+            background-color:#2c2c2c;
+        }
+        ul.nav-menu li a:hover{
+            background-color:#1c1c1c;
+        }
+        .nav-toggle{
+            display:block;
+        }
+      }
+      @media screen and (min-width:768px){
+        .nav-overlay.active{
+            visibility:hidden;
+            opacity:0;
+        }
+      }
+ 
+    </style>
 
 
     
@@ -32,103 +254,173 @@
             Information about Health Hunt.
         </div>
 
-        <!-- Links -->
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark border-bottom border-light" style="position: fixed; top: 50px; width: 100%; left: 0px; z-index: 100;">
+        <nav class="navigation" style="position: fixed; top: 50px; width: 100%;">
+          <div class="nav-logo"><img src="images/logo.jpg" alt="_target" style="line-height: 50px;width: 40px;height: 40px; margin-right: 15px;">HEALTH HUNT</div>
+          <ul class="nav-menu">
+            <li><a href="homepage.php">Home</a></li>
+            <li><a href="contactUs.php">Contact Us</a></li>
+            <li><a href="testimonial.php">Testimonials</a></li>
+            <li><a href="login.php">Login</a></li>
+            <li><a href="signup.php"> Sign Up</a> </li>
             
-            <img src="images/logo.jpg" alt="_target">
-    
-            <!--Search Bar-->
-            <form class="form-inline" action="/action_page.php">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-success" type="submit">Search</button>
-            </form>
-            <ul class="navbar-nav nav-item ml-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"></a>
-                
-                    <div class="dropdown-menu">
-                    <a class="dropdown-item" href="about.php">About</a>
-                    <a class="dropdown-item" href="contact.php">Contact</a>
-                    <a class="dropdown-item" href="testimonials3.php">Testimonials</a>
-                    <a class="dropdown-item" href="index.php">Exit</a>
-                    </div>
-                </li>
-            <li class="nav-item">
-                <a class="nav-link" href="login.php">Login</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="signup.php">Sign Up</a>
-            </li>    
-            </ul>
+          </ul>
+          <div class="nav-toggle">
+            <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+          </div>
         </nav>
-<div class="container">
+        <div class="nav-overlay"></div>
+        
+        <script src="js/dailydiet.js"></script>
+      <br>
+    <div class="container">
         <!--Different blocks to reach somewhere-->
         <div id="jumpbox">
         
-            <a href="#" class="jump" id="j1">Diagnosis & Conditions</a>
+            <a href="diagnosis.php" class="jump" id="j1">Diagnosis & Conditions</a>
             <!--<a href="#" class="jump" id="j2">Newborn Disorders</a>-->
-            <a href="#" class="jump" id="j3">Daily Diet</a>
-            <a href="#" class="jump" id="j4">Yoga & Exercises</a>
-            <a href="#" class="jump" id="j5">Mental Health Portal</a>
+            <a href="dailydiet.php" class="jump" id="j3">Daily Diet</a>
+            <a href="exercises.php" class="jump" id="j4">Yoga & Exercises</a>
+            <a href="mentalHealth.php" class="jump" id="j5">Mental Health Portal</a>
             <!--<a href="#" class="jump" id="j6">Nationwide Services Directory</a>-->
         </div>
     </header>
-    
-    <main style="top: 200px;">
-        <!-- Slideshow container -->
-        <div class="slideshow-container">
 
-            <!-- Full-width images with number and caption text -->
-            <div class="mySlides fade">
-            <div class="numbertext">1 / 3</div>
-            <img src="img/img2.jpg" style="width:800px; height: 600px; object-fit: cover; ">
-            <div class="text" style="font-size: larger;font-weight: bolder;background-color: black;">We're here to help you.</div>
-            </div>
+    <main style="margin-top: 200px;">
+
+    <div class="slideshowContainer">
+  
+      
+        <img class="imageSlides" src="img/jesse-orrico-Us3AQvyOP-o-unsplash.jpg">
+        <img class="imageSlides" src="img/johnny-mcclung-uDM99xirqI4-unsplash.jpg">
+        <img class="imageSlides" src="img/nordwood-themes-nDd3dIkkOLo-unsplash.jpg">
+        <img class="imageSlides" src="img/ola-mishchenko-VRB1LJoTZ6w-unsplash.jpg" alt="">
+        <img class="imageSlides" src="img/patrick-hendry-w5SgojGZooI-unsplash.jpg" alt="">
+        <img class="imageSlides" src="img/priscilla-du-preez-LxEsi17Au6U-unsplash.jpg" alt="">
+        <img class="imageSlides" src="img/sarah-dorweiler-x2Tmfd1-SgA-unsplash.jpg" alt="">
         
-            <div class="mySlides fade">
-            <div class="numbertext">2 / 3</div>
-            <div class="mapouter"><div class="gmap_canvas"><iframe width="800" height="600" id="gmap_canvas" src="https://maps.google.com/maps?q=mathura%2C%20India&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net"></a></div><style>.mapouter{position:relative;text-align:right;height:240px;width:332px;}.gmap_canvas {overflow:hidden;background:none!important;height: 600px;widows: 800px;}</style></div>
-            <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
-            <div class="text"style="font-size: larger;font-weight: bolder;background-color: black;">Our location</div>
-            </div>
         
-            <div class="mySlides fade">
-            <div class="numbertext">3 / 3</div>
-            <div class="mapouter"><div class="gmap_canvas"><iframe width="800" height="600" id="gmap_canvas" src="https://maps.google.com/maps?q=Nearby%20hospital&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net"></a></div><style>.mapouter{position:relative;text-align:right;height:600px;width:800px;}.gmap_canvas {overflow:hidden;background:none!important;height:600px;width:800px;}</style></div>
-            <div class="text"style="font-size: larger;font-weight: bolder;background-color: black;">Nearby hospitals</div>
-            </div>
+      
+        <span id ="leftArrow" class="slideshowArrow">&#8249;</span>
+        <span id ="rightArrow" class="slideshowArrow">&#8250;</span>
         
-            <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <div class="slideshowCircles">
+          <span class="circle dot"></span>
+          <span class="circle"></span>
+          <span class="circle"></span>
+          <span class="circle"></span><span class="circle"></span><span class="circle"></span><span class="circle"></span>
         </div>
-        <br>
         
-        <!-- The circles -->
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
+      </div>
     </main>
+      <script>
+        // IMAGE SLIDES & CIRCLES ARRAYS, & COUNTER
+          var imageSlides = document.getElementsByClassName('imageSlides');
+          var circles = document.getElementsByClassName('circle');
+          var leftArrow = document.getElementById('leftArrow');
+          var rightArrow = document.getElementById('rightArrow');
+          var counter = 0;
+
+          // HIDE ALL IMAGES FUNCTION
+          function hideImages() {
+            for (var i = 0; i < imageSlides.length; i++) {
+              imageSlides[i].classList.remove('visible');
+            }
+          }
+
+          // REMOVE ALL DOTS FUNCTION
+          function removeDots() {
+            for (var i = 0; i < imageSlides.length; i++) {
+              circles[i].classList.remove('dot');
+            }
+          }
+
+          // SINGLE IMAGE LOOP/CIRCLES FUNCTION
+          function imageLoop() {
+            var currentImage = imageSlides[counter];
+            var currentDot = circles[counter];
+            currentImage.classList.add('visible');
+            removeDots();
+            currentDot.classList.add('dot');
+            counter++;
+          }
+
+          // LEFT & RIGHT ARROW FUNCTION & CLICK EVENT LISTENERS
+          function arrowClick(e) {
+            var target = e.target;
+            if (target == leftArrow) {
+              clearInterval(imageSlideshowInterval);
+              hideImages();
+              removeDots();
+              if (counter == 1) {
+                counter = (imageSlides.length - 1);
+                imageLoop();
+                imageSlideshowInterval = setInterval(slideshow, 10000);
+              } else {
+                counter--;
+                counter--;
+                imageLoop();
+                imageSlideshowInterval = setInterval(slideshow, 10000);
+              }
+            } 
+            else if (target == rightArrow) {
+              clearInterval(imageSlideshowInterval);
+              hideImages();
+              removeDots();
+              if (counter == imageSlides.length) {
+                counter = 0;
+                imageLoop();
+                imageSlideshowInterval = setInterval(slideshow, 10000);
+              } else {
+                imageLoop();
+                imageSlideshowInterval = setInterval(slideshow, 10000);
+              }
+            }
+          }
+
+          leftArrow.addEventListener('click', arrowClick);
+          rightArrow.addEventListener('click', arrowClick);
+
+
+          // IMAGE SLIDE FUNCTION
+          function slideshow() {
+            if (counter < imageSlides.length) {
+              imageLoop();
+            } else {
+              counter = 0;
+              hideImages();
+              imageLoop();
+            }
+          }
+
+          // SHOW FIRST IMAGE, & THEN SET & CALL SLIDE INTERVAL
+          setTimeout(slideshow, 1000);
+          var imageSlideshowInterval = setInterval(slideshow, 10000);
+      </script>
+
+    
+    
+   
+      
 
     <br><br><br>
 
     <section>
       <div class="card-columns" style="width: 80%; display: flex;margin: auto;">
-        <div class="card bg-primary">
-          <div class="card-body text-center">
+        <div class="card bg-primary" id="c1">
+          <div class="card-body text-center" >
             <h2>About the portal</h2><br>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus porro, aliquam molestias voluptatem repellendus asperiores, culpa omnis deserunt minus laborum quidem amet reprehenderit facilis impedit facere quasi iste. Officiis, vitae!</p>
           </div>
         </div>
-        <div class="card bg-warning">
+        <div class="card bg-warning" id="c2">
           <div class="card-body text-center">
             <h2>Who will guide you?</h2><br>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus porro, aliquam molestias voluptatem repellendus asperiores, culpa omnis deserunt minus laborum quidem amet reprehenderit facilis impedit facere quasi iste. Officiis, vitae!</p>
           </div>
         </div>
-        <div class="card bg-success">
+        <div class="card bg-success" id="c3">
           <div class="card-body text-center">
             <h2>What is Health Hunt?</h2><br>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus porro, aliquam molestias voluptatem repellendus asperiores, culpa omnis deserunt minus laborum quidem amet reprehenderit facilis impedit facere quasi iste. Officiis, vitae!</p>
@@ -139,12 +431,12 @@
     <br><br>
 
     <div id="head4">
-        <h3>What you'll find in the Portal</h3>
+        <h2>What you'll find in the Portal</h2>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsum pariatur delectus ratione cumque sequi ullam, suscipit, labore accusamus obcaecati perspiciatis corrupti libero. Saepe architecto porro iure repellendus, quasi, fuga atque amet nam repudiandae rem suscipit, perferendis laboriosam officia id ratione sequi ad illo velit ab laborum incidunt. Corrupti, tenetur?
         </p>
         <a href="signup.php">Sign In to get connected with our expert.</a>
-        <p style="text-align: center;">Your identity is safe with us!</p>
+        <p style="text-align: center;"><b> Your identity is safe with us!</b></p>
     </div>
     
     <br><br>
@@ -180,7 +472,7 @@
                             <blockquote>
                                 <div class="row">
                                     <div class="col-sm-8 col-sm-offset-2">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. !</p>
+                                        <p style="color: black;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. !</p>
                                         <small>Someone famous</small>
                                     </div>
                                 </div>
@@ -191,7 +483,7 @@
                             <blockquote>
                                 <div class="row">
                                     <div class="col-sm-8 col-sm-offset-2">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                                        <p style="color: black;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
                                         <small>Someone famous</small>
                                     </div>
                                 </div>
@@ -202,7 +494,7 @@
                             <blockquote>
                                 <div class="row">
                                     <div class="col-sm-8 col-sm-offset-2">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. .</p>
+                                        <p style="color: black;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. .</p>
                                         <small>Someone famous</small>
                                     </div>
                                 </div>
@@ -365,7 +657,7 @@
   
      
        <!-- Copyright -->
-    <div class="footer-copyright text-center py-3" style="color: grey; background-color: rgb(29, 28, 28); margin-bottom: -10px; height: 60px; display: flex; align-content: center; justify-content: center; line-height: 50px;">© 2020 Copyright:
+    <div class="footer-copyright text-center py-3" style="color: grey; background-color: rgb(29, 28, 28); margin-bottom: -10px; height: 60px; display: flex; align-content: center; justify-content: center; line-height: 40px;">© 2020 Copyright:
       <a href="https://healthhunt.com/" style="color: white">HealthHunt.com</a>
     </div>
   </footer>
@@ -373,36 +665,7 @@
 
 
 
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        // Next/previous controls
-        function plusSlides(n) {
-        showSlides(slideIndex += n);
-        }
-
-        // Thumbnail image controls
-        function currentSlide(n) {
-        showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-        }
-    </script>
+    
     
 </body>
 </html>
