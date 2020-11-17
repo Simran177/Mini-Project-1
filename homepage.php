@@ -21,6 +21,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
     <style>
       .slideshowContainer {
         position: relative;
@@ -244,6 +248,7 @@
             visibility:hidden;
             opacity:0;
         }
+        
       }
  
     </style>
@@ -290,125 +295,58 @@
             
         </div>
     </header>
+    
+    <div class="container" id="slides">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
 
-    <main style="margin-top: 200px;">
-
-    <div class="slideshowContainer">
-  
-      
-        <img class="imageSlides" src="img/jesse-orrico-Us3AQvyOP-o-unsplash.jpg" style="width: 800px; height: 500px; background-position: center; background-size: contain;">
-        <img class="imageSlides" src="img/johnny-mcclung-uDM99xirqI4-unsplash.jpg">
-        <img class="imageSlides" src="img/ola-mishchenko-VRB1LJoTZ6w-unsplash.jpg" alt="">
-        <img class="imageSlides" src="img/patrick-hendry-w5SgojGZooI-unsplash.jpg" alt="">
-        <img class="imageSlides" src="img/priscilla-du-preez-LxEsi17Au6U-unsplash.jpg" alt="">
-        <img class="imageSlides" src="img/wall.png" alt="">
-        
-        
-        
-      
-        <span id ="leftArrow" class="slideshowArrow">&#8249;</span>
-        <span id ="rightArrow" class="slideshowArrow">&#8250;</span>
-        
-        <div class="slideshowCircles">
-          <span class="circle dot"></span>
-          <span class="circle"></span>
-          <span class="circle"></span>
-          <span class="circle"></span>
-          <span class="circle"></span>
-          <span class="circle"></span>
-        </div>
-        
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner center">
+      <div class="item active">
+          <img src="img/jesse-orrico-Us3AQvyOP-o-unsplash.jpg" alt="Los Angeles" style="width:100%;">
       </div>
-    </main>
-      <script>
-        // IMAGE SLIDES & CIRCLES ARRAYS, & COUNTER
-          var imageSlides = document.getElementsByClassName('imageSlides');
-          var circles = document.getElementsByClassName('circle');
-          var leftArrow = document.getElementById('leftArrow');
-          var rightArrow = document.getElementById('rightArrow');
-          var counter = 0;
 
-          // HIDE ALL IMAGES FUNCTION
-          function hideImages() {
-            for (var i = 0; i < imageSlides.length; i++) {
-              imageSlides[i].classList.remove('visible');
-            }
-          }
-
-          // REMOVE ALL DOTS FUNCTION
-          function removeDots() {
-            for (var i = 0; i < imageSlides.length; i++) {
-              circles[i].classList.remove('dot');
-            }
-          }
-
-          // SINGLE IMAGE LOOP/CIRCLES FUNCTION
-          function imageLoop() {
-            var currentImage = imageSlides[counter];
-            var currentDot = circles[counter];
-            currentImage.classList.add('visible');
-            removeDots();
-            currentDot.classList.add('dot');
-            counter++;
-          }
-
-          // LEFT & RIGHT ARROW FUNCTION & CLICK EVENT LISTENERS
-          function arrowClick(e) {
-            var target = e.target;
-            if (target == leftArrow) {
-              clearInterval(imageSlideshowInterval);
-              hideImages();
-              removeDots();
-              if (counter == 1) {
-                counter = (imageSlides.length - 1);
-                imageLoop();
-                imageSlideshowInterval = setInterval(slideshow, 10000);
-              } else {
-                counter--;
-                counter--;
-                imageLoop();
-                imageSlideshowInterval = setInterval(slideshow, 10000);
-              }
-            } 
-            else if (target == rightArrow) {
-              clearInterval(imageSlideshowInterval);
-              hideImages();
-              removeDots();
-              if (counter == imageSlides.length) {
-                counter = 0;
-                imageLoop();
-                imageSlideshowInterval = setInterval(slideshow, 10000);
-              } else {
-                imageLoop();
-                imageSlideshowInterval = setInterval(slideshow, 10000);
-              }
-            }
-          }
-
-          leftArrow.addEventListener('click', arrowClick);
-          rightArrow.addEventListener('click', arrowClick);
-
-
-          // IMAGE SLIDE FUNCTION
-          function slideshow() {
-            if (counter < imageSlides.length) {
-              imageLoop();
-            } else {
-              counter = 0;
-              hideImages();
-              imageLoop();
-            }
-          }
-
-          // SHOW FIRST IMAGE, & THEN SET & CALL SLIDE INTERVAL
-          setTimeout(slideshow, 1000);
-          var imageSlideshowInterval = setInterval(slideshow, 10000);
-      </script>
-
+      <div class="item">
+          <img src="img/johnny-mcclung-uDM99xirqI4-unsplash.jpg" alt="Chicago" style="width:100%;">
+      </div>
     
-    
-   
+      <div class="item">
+          <img src="img/fabian-moller-gI7zgb80QWY-unsplash.jpg" alt="New york" style="width:100%;">
+      </div>
+        
+       <div class="item">
+           <img src="img/chander-r-AtfA8NDgpKA-unsplash.jpg" alt="New york" style="width:100%;">
+      </div>
+        
+      <div class="item">
+          <img src="img/ola-mishchenko-VRB1LJoTZ6w-unsplash.jpg" alt="New york" style="width:100%;">
+      </div>
+        
+      <div class="item">
+          <img src="img/priscilla-du-preez-LxEsi17Au6U-unsplash.jpg" alt="New york" style="width:100%;">
+      </div>
       
+      <div class="item">
+          <img src="img/patrick-hendry-w5SgojGZooI-unsplash.jpg" alt="New york" style="width:100%;">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
 
     <br><br><br>
 

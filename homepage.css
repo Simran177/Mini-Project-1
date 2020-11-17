@@ -25,9 +25,9 @@ header img{
     text-align: center;
     position: fixed;
     top: 0;
-    z-index: 100;
-}
-#jumpbox .jump
+    z-index: 50;
+    
+}#jumpbox .jump
 {
     width: 150px;
     height: 150px;
@@ -45,7 +45,7 @@ header img{
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    z-index: 50;
+    
 }
 #jumpbox{
     display: flex;
@@ -263,11 +263,15 @@ hr{
 .card p{
     text-align: center;
 }
+#slides{
+    margin-top:200px; margin-bottom: 200px;width:50%; height:200px; z-index: -2000;
+}
 @media(max-width: 768px){
     .card-columns{
         display: flex;
         flex-direction: column;
         width: 100%;
+        margin-top: 0;
     }
     #c1{
         order: 1;
@@ -283,6 +287,12 @@ hr{
     }
     .card-columns::after{
         clear: both;
+    }
+    
+    #slides{
+        margin-bottom: 100px;
+        width:80%;
+        height:100px;
     }
 }
 /*@media(max-width: 768px) {
