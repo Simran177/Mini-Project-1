@@ -10,7 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Logout</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!--Google photos of customers-->
@@ -30,6 +30,6 @@
     
 </head>
 <body>
-    <p style="color:white;background-color:rgba(162,222,208,1);display:flex;justify-content: center;align-items: center;font-size: 40px;margin-top:200px;">Thanks for visiting our page &#128515</p>
+    <p style="color:white;background-color:rgba(162,222,208,1);display:flex;justify-content: center;align-items: center;font-size: 40px;margin-top:200px;">Thanks for visiting our page! &#128515</p>
 </body>
 </html>

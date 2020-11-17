@@ -513,9 +513,7 @@ if(!isset($_SESSION['username']))   //if user presses back or log out
             <li>
               <a href="signup.php">Sign Up</a>
             </li>
-            <li>
-              <a href="about.php">About Us</a>
-            </li>
+            
           </ul>
   
         </div>
