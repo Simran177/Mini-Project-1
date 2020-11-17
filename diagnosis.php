@@ -441,9 +441,7 @@
             <li style="padding: 5px 0px;">
               <a href="signup.php">Sign Up</a>
             </li>
-            <li style="padding: 5px 0px;">
-              <a href="about.php">About Us</a>
-            </li>
+            
           </ul>
   
         </div>

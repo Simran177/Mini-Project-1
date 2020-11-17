@@ -416,9 +416,7 @@
             <li>
               <a href="signup.php">Sign Up</a>
             </li>
-            <li>
-              <a href="about.php">About Us</a>
-            </li>
+            
           </ul>
   
         </div>
