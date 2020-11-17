@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(!isset($_SESSION['username']))   //if user presses back or log out
+    header('location:login.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -271,6 +277,7 @@
             <li><a href="testimonial.php">Testimonials</a></li>
             <li><a href="login.php">Login</a></li>
             <li><a href="signup.php"> Sign Up</a> </li>
+            <li><a href="logout.php">Logout</a></li>
             
           </ul>
           <div class="nav-toggle">
@@ -284,6 +291,7 @@
         <script src="js/dailydiet.js"></script>
       <br>
     <div class="container">
+    <h2 class="text-center text-success" style="margin-top: 120px; font-weight: bolder">Welcome <?php echo $_SESSION['username'] ?></h2>
         <!--Different blocks to reach somewhere-->
         <div id="jumpbox">
         
