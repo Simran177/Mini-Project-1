@@ -47,6 +47,7 @@ header img{
     border-radius: 10px;
     
 }
+
 #jumpbox{
     display: flex;
     flex-direction: row;
@@ -77,9 +78,10 @@ header img{
 }
 #j6{
     order: 6;
-}.jump{
-    z-index: -1000;
 }
+/*.jump{
+    z-index: -1000;
+}*/
 .jump:hover{
     text-decoration: none;
     opacity: 0.8;

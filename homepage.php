@@ -290,22 +290,21 @@ if(!isset($_SESSION['username']))   //if user presses back or log out
         
         <script src="js/dailydiet.js"></script>
       <br>
-    <div class="container">
+    <!--<div class="container">-->
     <h2 class="text-center text-success" style="margin-top: 120px; font-weight: bolder">Welcome <?php echo $_SESSION['username'] ?></h2>
         <!--Different blocks to reach somewhere-->
         <div id="jumpbox">
-        
             <a href="diagnosis.php" class="jump" id="j1">Diagnosis & Conditions</a>
-            
             <a href="dailydiet.php" class="jump" id="j3">Daily Diet</a>
             <a href="exercises.php" class="jump" id="j4">Yoga & Exercises</a>
             <a href="mentalHealth.php" class="jump" id="j5">Mental Health Portal</a>
             
         </div>
+      
     </header>
     
     <div class="container" id="slides">
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
