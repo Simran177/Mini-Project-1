@@ -35,7 +35,7 @@
   <nav class="navigation" style="position: fixed; top: 50px; width: 100%;">
     <div class="nav-logo"><img src="images/logo.jpg" alt="_target" style="line-height: 50px;width: 40px;height: 40px; margin-right: 15px;">HEALTH HUNT</div>
     <ul class="nav-menu">
-      <li><a href="homepage.php">Home</a></li>
+      <li><a href="#">Home</a></li>
       <li><a href="contactUs.php">Contact Us</a></li>
       <li><a href="testimonial.php">Testimonials</a></li>
       <li><a href="login.php">Login</a></li>

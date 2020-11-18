@@ -284,6 +284,7 @@
                 <h1 class="h1">
                     Contact us :)
                     <br><small>Feel free to get connected.</small></h1>
+
                   <?php 
             $msg = "";
         
@@ -294,6 +295,7 @@
             }
            
                   ?>
+                  
             </div>
         </div>
     </div>
