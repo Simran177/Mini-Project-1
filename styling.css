@@ -111,7 +111,7 @@ img{
 }
 @media(max-width: 500px){
    
-    #navbar a{
+    #navbar a{e
         text-decoration: none;
         display: inline-block;
         text-align: center;

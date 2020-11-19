@@ -263,15 +263,14 @@ if(!isset($_SESSION['username']))   //if user presses back or log out
             </label>
             <div class="menu">
             <ul>
-                <li ><a href="#"><i class="fa fa-home"></i>Home</a></li>
+                <li ><a href="homepage.php"><i class="fa fa-home"></i>Home</a></li>
               
-                <li><a href="#"><i class="fa fa-user"></i>About</a></li>
+                <li><a href="testimonial.php"><i class="fa fa-tasks"></i>Testimonials</a></li>
                 
-                <li><a href="#"><i class="fa fa-tasks"></i>Services</a></li>
+                <li><a href="login.php"><i class="fa fa-user"></i>LogIn</a></li>
                 
-                <li><a href="#"><i class="fa fa-rss"></i>Blog</a></li>
+                <li><a href="signup.php"><i class="fa fa-user"></i>SignUp</a></li>
                 
-                <li><a href="#"><i class="fa fa-id-card"></i>Contact</a></li>
                 
                 <div class="social-sites">
                     
@@ -401,7 +400,7 @@ if(!isset($_SESSION['username']))   //if user presses back or log out
   
           <!-- Content -->
           <h3 class="text-uppercase" >Health Hunt</h3>
-          <p style="color:white;">We do our best to let you reach & experience each corner of the world.</p>
+          <p style="color:white;">Explore Healthy Living With Us!</p>
   
         </div>
         <!-- Grid column -->

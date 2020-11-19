@@ -424,7 +424,7 @@ if(!isset($_SESSION['username']))   //if user presses back or log out
   
           <!-- Content -->
           <h3 class="text-uppercase" >Health Hunt</h3>
-          <p style="color:white;">We do our best to let you reach & experience each corner of the world.</p>
+          <p style="color:white;">Explore Healthy Living With Us!</p>
   
         </div>
         <!-- Grid column -->
