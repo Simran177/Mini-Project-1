@@ -167,11 +167,29 @@
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0" nonce="yy12DFfd"></script>
     
     
+            <!--Search Bar-->
+            <!--<form class="form-inline" action="/action_page.php">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>-->
+           
     
     <form action="validation.php" method="post" style="width: 550px;">
         
         <div class="txtcontainer">
                 <h1 style="color:rgba(253, 253, 253, 0.952); font-size: 50px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);">Log In</h1>
+                
+                 <?php 
+            $msg = "";
+        
+            if(isset($_GET['error']))
+            {
+               $msg = "EmailId or password entered is incorrect. Try Again!";
+               echo '<div class="alert alert-danger">'.$msg.'</div>';
+            }
+            
+           
+                  ?>
         </div>
         
       

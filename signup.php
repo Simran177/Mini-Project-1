@@ -10,6 +10,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>SignUp!</title>
     <style>
+        
         *{
             margin: 0px 0px 0px 0px;
             padding: 0px 0px 0px 0px;
@@ -160,6 +161,18 @@
     <form action="registration.php" method="post" style="width: 550px;">
         <div class="txtcontainer">
                 <h1 style="color:rgba(253, 253, 253, 0.952); font-size: 50px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); margin-top: 30px;">Sign Up</h1>
+                
+                 <?php 
+            $msg = "";
+        
+            if(isset($_GET['error']))
+            {
+               $msg = "User already exists, SignIn from a different account";
+               echo '<div class="alert alert-danger">'.$msg.'</div>';
+            }
+            
+           
+                  ?>
         </div>
         
         <div class="container">
