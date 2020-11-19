@@ -408,7 +408,7 @@ if(!isset($_SESSION['username']))   //if user presses back or log out
         <ul>
             <li ><a href="homepage.php"><i class="fa fa-home"></i>Home</a></li>
               
-              <li><a href="testimonial.php"><i class="fa fa-tasks"></i>Testimonials</a></li>
+              <li><a href="contactUS.php"><i class="fa fa-volume-control-phone"></i>Contact Us</a></li>
               
               <li><a href="login.php"><i class="fa fa-user"></i>LogIn</a></li>
               
