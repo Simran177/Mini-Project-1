@@ -97,7 +97,7 @@ if(!isset($_SESSION['username']))   //if user presses back or log out
 </head>
 <body>
   <div id="bar">
-    Daily Diet Recommneded.
+    Exercises Recommneded.
   </div>
   <nav class="navigation" style="position: fixed; top: 50px; width: 100%;">
     <div class="nav-logo"><img src="images/logo.jpg" alt="_target" style="line-height: 50px;width: 40px;height: 40px; margin-right: 15px;">HEALTH HUNT</div>
