@@ -215,7 +215,7 @@ If your child is in need of community mental health services you can find help i
   <br>
   <br>
   <h3 style="text-align: center; color: white; font-weight: bolder;">Talk to our specialist. Tap <i class="fa fa-hand-o-down" aria-hidden="true" style="font-size: large; margin-left: -20px; "></i></h3>
-  <a href="https://app.slack.com/client/T01EL8KALEN/C01EL8T3LE6?redir=%2Fapps%2FA7FTEHPEG"><i class="fa fa-comments-o" aria-hidden="true"></i></a>
+  <a href="https://app.slack.com/client/T01EL8KALEN/D01EYT38Q1X?redir=%2Fapps%2FA7FTEHPEG"><i class="fa fa-comments-o" aria-hidden="true"></i></a>
 </div>
 
 <!--END OF CHATBOT-->
