@@ -207,7 +207,7 @@
       </form>
     
     <footer>
-        Copyright © Tours & Travels. All Rights Reserved and Contact Us: +91 90000 00000
+        Copyright © Health Hunt. All Rights Reserved and Contact Us: +91 90000 00000
     </footer>
 </body>
 </html>
