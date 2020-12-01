@@ -219,7 +219,7 @@ If your child is in need of community mental health services you can find help i
   <ul id="list0" style="list-style-type: decimal;">
   <li>Go to the Navigation bar of the page. </li>
   <li>Click on Contact Us. You'll be directed to our Contact page.</li>
-  <li>Fill the credentials. Make sure you've selected 'Other' in subject. In the message box, tell us why you need a live seesion and your expectations about the session.</li>
+  <li>Fill the credentials. Make sure you've selected 'Other' in subject. In the message box, tell us why you need a live session and your expectations about the session.</li>
   </ul>
   <p>As soon as we get your details, we'll provide you a 'Link to join' on your mentioned email id to attend our live sessions.</p>
   <p>Come back and tap the Chat icon below. We'll be there to guide you further on your Mental Health.</p>
