@@ -205,20 +205,31 @@ if(!isset($_SESSION['username']))   //if user presses back or log out
 
 <p>Seek immediate assistance if you think your child is in danger of harming themselves or others. You can call a crisis line or the National Suicide Prevention Line at &nbsp; <a  style="text-decoration: underline; color: maroon;" href="tel:7393090868">7393090868</a>&nbsp;
 If your child is in need of community mental health services you can find help in your area.</p>
-</div>
+
 
 <!--CODE FOR CHATBOT-->
 <div id="chat">
   <h2 id="chatLog">ChatBot by Health Hunt <br></h2>
   <br>
   <input type="text" name="" id="userBox" onkeydown="if(event.keyCode==13){talk()}" placeholder="Put you queries about the website here...">
-  <br>
-  <br>
-  <h3 style="text-align: center; color: white; font-weight: bolder;">Talk to our specialist. Tap <i class="fa fa-hand-o-down" aria-hidden="true" style="font-size: large; margin-left: -20px; "></i></h3>
+  
+<div class="chat">
+  <h4>To attend live sessions with our experts.</h4>
+  <p>Follow the steps mentioned below:</p>
+  <ul id="list0" style="list-style-type: decimal;">
+  <li>Go to the Navigation bar of the page. </li>
+  <li>Click on Contact Us. You'll be directed to our Contact page.</li>
+  <li>Fill the credentials. Make sure you've selected 'Other' in subject. In the message box, tell us why you need a live seesion and your expectations about the session.</li>
+  </ul>
+  <p>As soon as we get your details, we'll provide you a 'Link to join' on your mentioned email id to attend our live sessions.</p>
+  <p>Come back and tap the Chat icon below. We'll be there to guide you further on your Mental Health.</p>
+  <h3 style="text-align: center; color: white; font-weight: bolder;">And then talk to our specialist. Tap <i class="fa fa-hand-o-down" aria-hidden="true" style="font-size: large; margin-left: -20px; "></i></h3>
   <a href="https://app.slack.com/client/T01EL8KALEN/D01EYT38Q1X?redir=%2Fapps%2FA7FTEHPEG"><i class="fa fa-comments-o" aria-hidden="true"></i></a>
+<!--END OF CHATBOT-->
+</div>
+</div>
 </div>
 
-<!--END OF CHATBOT-->
 
 
 
