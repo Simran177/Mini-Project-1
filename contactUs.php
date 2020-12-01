@@ -374,7 +374,7 @@ if(!isset($_SESSION['username']))   //if user presses back or log out
                         91- 10000000
                 </address>
                 <address>
-                    <strong>Tours & Travels Team</strong><br>
+                    <strong>Health Hunt Team</strong><br>
                     <a href="mailto: aishwarya.singh_cs18@gla.ac.in">Mail us here!</a>
                 </address>
                 </form>
