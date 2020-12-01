@@ -17,11 +17,12 @@ header('location:login.php');
    $result= mysqli_query($con, $query);
    $num= mysqli_num_rows($result);
     
-   if($num==1){
-       echo "duplicate data";
-   }
-   else{
-       $query2= "Insert into signin(email_id,password) values ('$email_id','$password')";
-       mysqli_query($con, $query2);
-   }
+   if($num>0){
+    header('location:signup.php?error');
+}
+else{
+    $query2= "Insert into signin(email_id,password) values ('$email_id','$password')";
+    mysqli_query($con, $query2);
+    header('location:login.php');
+}
 ?>

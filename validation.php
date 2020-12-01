@@ -17,11 +17,10 @@ session_start();
    $num= mysqli_num_rows($result);
     
    if($num>0){
-       $_SESSION['username']=$email_id;  //storing user_id in a variable
-       header('location:homepage.php');
-       
-   }
-   else{
-       header('location:login.php');
-   }
+    $_SESSION['username']=$email_id;  //storing user_id in a variable
+    header('location:homepage.php');
+}
+else{
+     header('location:login.php?error');
+}
 ?>
