@@ -468,7 +468,7 @@ if(!isset($_SESSION['username']))   //if user presses back or log out
                 </div>
             </div>
         </div>
-        <a class="btn btn-primary" href="contact.php" style="font-size: 18px;">
+        <a class="btn btn-primary" href="contactUs.php" style="font-size: 18px;">
             Add your valuable reviews!!<i class="fa fa-arrow-right" style="margin-left: 5px;"></i></a>
     </div>
   </div>
