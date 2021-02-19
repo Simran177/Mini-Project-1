@@ -116,6 +116,9 @@ if(!isset($_SESSION['username']))   //if user presses back or log out
             margin: 0 15px 100px;
             position: relative;
             margin-top: 168px;
+
+            /*added later*/
+            z-index: -5;
         }
 
         .testimonal:before,.testimonal:after{
@@ -384,10 +387,7 @@ if(!isset($_SESSION['username']))   //if user presses back or log out
         }
         hr{
             opacity: .3;
-            
         }
-
-        
     </style>
 </head>
 <body>
@@ -532,6 +532,7 @@ if(!isset($_SESSION['username']))   //if user presses back or log out
     </section>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    
 
     <script>
     $(document).ready(function(){
